@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="work">
+	<form id="workForm" name="workForm" method="post" action=".">{% csrf_token %}
+	<input type="hidden" name="searching" value="true">
+	<label for="job-cat-home">RECHERCHE D'EMPLOI</label>
+	<select id="job-cat-home" name="category">
+		<option value="">Choisir une catégorie</option>
+		<option value="1">Administration et exploitation</option><option value="9" selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Aide administrative et de direction</option><option value="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Ressources humaines / Formation</option><option value="11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Multimédia / Communications</option><option value="12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Soutien de bureau</option><option value="13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Exploitation / Gestion de la chaîne d’approvisionnement</option><option value="14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion</option><option value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="3">Service à la clientèle</option><option value="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Crédit / Recouvrement / Facturation</option><option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Service à la clientèle</option><option value="27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Traitement des appels entrants</option><option value="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Traitement des appels de sortie</option><option value="29">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Personnel de supervision / Chefs d’équipe</option><option value="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion</option><option value="31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="7">Finance et comptabilité</option><option value="58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Vérification / Expertise comptable</option><option value="59">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Comptabilité générale</option><option value="60">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Investissements / Hypothèques</option><option value="61">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Analyse financière et analyse des activités commerciales</option><option value="62">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Comptes clients / Comptes fournisseurs / Traitement de paie</option><option value="63">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion</option><option value="170">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Controlleur</option><option value="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="5">Soins de santé</option><option value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Infirmiers(ères)</option><option value="42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Infirmiers(ères) auxiliaires</option><option value="43">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Préposés(ées) aux bénéficiaires</option><option value="44">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Aide aux familles</option><option value="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Techniques de laboratoire </option><option value="46">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Services paramédicaux</option><option value="168">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Ressources humaines / Formation</option><option value="47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="6">Technologie de l’information</option><option value="49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Développement et conception d’applications </option><option value="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Administration et stockage de bases de données</option><option value="51">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Applications d’entreprise</option><option value="52">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Infrastructure / Soutien technique</option><option value="53">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion de projet / Analyste des systèmes de gestion</option><option value="54">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Assurance de la qualité / Conformité</option><option value="169">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Ressources humaines / Formation</option><option value="55">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion</option><option value="166">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Vente de technologie</option><option value="56">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="8">Ingénierie</option><option value="159">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Génie civil</option><option value="160">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Génie électrique</option><option value="161">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Géotechnique</option><option value="162">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Génie industriel</option><option value="163">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Génie mécanique</option><option value="164">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Domaine technico-commercial</option><option value="165">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="4">Vente et marketing</option><option value="33">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Publicité / Relations publiques</option><option value="34">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Coordination</option><option value="35">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Distribution</option><option value="36">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Planification / Gestion de produits</option><option value="37">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Vente / Développement commercial</option><option value="38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion</option><option value="39">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option><option value="2">Métiers et industrie</option><option value="17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Services d’alimentation</option><option value="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Main-d’œuvre générale</option><option value="19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Production / Fabrication</option><option value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Conduite de machines / Métiers spécialisés</option><option value="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Soudage / Travail des métaux</option><option value="22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Gestion</option><option value="143">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Électrique et Mécanique</option><option value="23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Autres</option>	</select>
+	&nbsp
+	<select name="city" style="margin-right: 8px;margin-top: 10px;margin-bottom: 10px;">
+		<option value="">Choisir un lieu</option>
+		<option value="Québec">Québec</option><option value="Québec et les environs">  Québec et les environs</option><option value="Montréal (Région de)">  Montréal (Région de)</option><option value="Montréal – Centre">  Montréal – Centre</option><option value="Montréal – Laval & Rive Nord">  Montréal – Laval & Rive Nord</option><option value="Montréal – Rive Sud">  Montréal – Rive Sud</option><option value="Montréal – Ouest de l'Île">  Montréal – Ouest de l'Île</option><option value="Montréal – Est">  Montréal – Est</option><option value="Montréal - St-Laurent">  Montréal - St-Laurent</option><option value="Blainville/Laval Rive Nord">  Blainville/Laval Rive Nord</option><option value="Gatineau et les environs">  Gatineau et les environs</option><option value="Ontario">Ontario</option><option value="Ottawa - Région de la capitale nationale">  Ottawa - Région de la capitale nationale</option><option value="Toronto (RGT)">  Toronto (RGT)</option><option value="Brampton et les environs">  Brampton et les environs</option><option value="Concord  et les environs">  Concord  et les environs</option><option value="Markham et les environs">  Markham et les environs</option><option value="Mississauga et les environs">  Mississauga et les environs</option><option value="North York et les environs">  North York et les environs</option><option value="Scarborough et les environs">  Scarborough et les environs</option><option value="Toronto – Central">  Toronto – Central</option><option value="Oakville et les environs">  Oakville et les environs</option><option value="Whitby et les environs">  Whitby et les environs</option><option value="Burlington et les environs">  Burlington et les environs</option><option value="Ajax et les environs">  Ajax et les environs</option><option value="Pickering et les environs">  Pickering et les environs</option><option value="Kitchener/Waterloo">  Kitchener/Waterloo</option><option value="Oshawa et les environs">  Oshawa et les environs</option><option value="Autre provinces">Autre provinces</option><option value="Autre villes canadiennes">  Autre villes canadiennes</option>				</select><br>
+	<input type="submit" name="workBtn" value="Recherche" id="searchBtn">
+<br><br>
+	<div class="content">
+					<a name="resultats"></a>
+
+
+				<h2><em>{{ jobs.count }} r&eacute;sultat(s) trouv&eacute;(s)</em></h2>
+				<div id="jobResults">
+					<div class="listing head">
+						<div class="item">DATE</div><div class="item">DESCRIPTION</div><div class="item">TEMP/PERM</div><div class="item">SALAIRE</div>
+					</div>
+						{% for job in jobs %}
+						<div class="listing">
+							<div class="item"><nobr>{{ job.dated }}</nobr></div><div class="item"><a href="/jobs/{{ job.id }}/">{{ job.job_category }} </a></div><div class="item">{{ job.duration }}</div><div class="item">{{ job.salary }}</div><div class="item"><a class="btnGreensm" href="mailto:{{ job.email }}?subject={{ job.job_category }}">Postuler&nbsp;en&nbsp;ligne</a></div>
+						</div>
+						{% endfor %}
+				</div>
+			</div>
+</div>
+<!-- <div id="toolKit" class="">
+	<div class="content">
+		<h2>ASSIGNMENT TOOLKIT</h2>
+		<p><strong>Already working for Quantum as a temporary employee?</strong> Your Assignment Toolkit provides you with everything you need to manage your important transactions online.  By creating an employee profile, you can register for direct deposit, view/print your paystubs, access your timesheet history, request a Record of Employment, and more!</p>
+
+		<div id="tools">
+			<div id="tool1" class="tool">
+				<a href="register.php"><img src="images/toolkit-profile.png" alt="">
+				<span>Create a Profile</span></a>
+			</div>
+			<div id="tool2" class="tool">
+				<a href="timesheet.php"><img src="images/toolkit-timeSheet.png" alt="">
+				<span>Download a<br>Timesheet</span></a>
+			</div>
+			<div id="tool3" class="tool">
+				<a href="faq.php"><img src="images/toolkit-faq.png" alt="">
+				<span>FAQ</span></a>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+{% endblock %}

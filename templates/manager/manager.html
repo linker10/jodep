@@ -1,0 +1,2838 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="ctl00_subMenuBox" class="subMenuBox">
+  <div class="authorisedLeftSubMenu">
+      <span id="ctl00_SignedInAs" class="float-left">Vous &#234;tes maintenant connect&#233; comme {{ request.user.username }}</span>
+  </div>
+
+  <div class="authorisedRightSubMenu">
+      <ul class="topnav">
+  
+        <a href="{% url 'manager:biography' %}" style='text-decoration: none; color: #000;'><li id="ctl00_MyResume" class="topnav-item first" >CV</li></a>
+          <li class="topnav-item border-right-none" >
+            <a href="/accounts/logout/" style='text-decoration: none; color: #000;'>Déconnexion</a>
+  </li>                                
+</ul>
+  </div>
+
+</div>
+<div class="MainContent" style=""> 
+
+    <script type="text/javascript" language="javascript">
+      <!-- hide from non-javascript browsers
+    function ConfirmForm() {
+      DeactivateAccountPopupControl.Show();
+    }
+    //-->
+    </script>
+
+    <center>
+  
+      <table class="DefaultTable">
+        <tr>
+          <td class="DefaultBottom">          
+            <div class="fontcolor" >
+              
+              
+              
+              <div id="container">
+                <div id="ctl00_Main_firstChild" style="float:left; display:inline-table; margin-bottom: 10px;">
+                  <table style="width:100%;">
+                    <tr>
+                      
+                                          
+                      
+                      
+                      
+                    </tr>
+                  </table>
+                </div>
+              
+                <div style="margin-top: 3px; width: 100%; float:left; display:inline-table;">
+  
+                  <table id="ctl00_Main_UserOptions" style="width:100%;">
+      <tr>
+          <td valign="top" style="padding-right:0px;width: 32%;">
+                        <table id="ctl00_Main_LoginOptions" cellpadding="5">
+              <tr>
+                  <td><span id="ctl00_Main_LoginOptionsLabel" title="Mon compte" class="MainContentTitleGray text-decoration-none">Mon compte</span></td>
+              </tr>
+              <tr>
+                  <td><a id="ctl00_Main_ResumeLinkButton" title="modifier mon CV" class="AllLinksBlue text-decoration-none" href="{% url 'manager:biography' %}">modifier mon CV</a></td>
+              </tr>
+              <tr>
+              </tr>
+              <tr>
+                <td><a id="ctl00_Main_ResumeLinkButton" title="Changer l'e-mail" class="AllLinksBlue text-decoration-none" href="/accounts/edit/">Editer le profil</a></td>
+            </tr>
+            <tr>
+            </tr>
+              <tr>
+                <td><a id="ctl00_Main_ResumeLinkButton" title="changer le mot de passe" class="AllLinksBlue text-decoration-none" href="/accounts/password_change/">changer le mot de passe</a></td>
+            </tr>
+            <tr>
+            </tr>
+              <tr id="ctl00_Main_DectivateAccountLinkButtonRow">
+                  <td><a id="ctl00_Main_DeactivateAccountLinkButton" title="désactiver mon compte" class="AllLinksBlue text-decoration-none" href="{% url 'manager:deactivate' %}">désactiver mon compte</a></td>
+              </tr>
+          </table>
+                              
+                      </td>
+      </tr>
+  </table>
+  
+                </div>
+              </div>
+                          
+              <div id="footer">
+                <div class="MainContentTitleGray" style="text-align:left; padding: 0px 0px 0px 5px;" ></div>
+                <div class="AllText" style="width:100%; overflow:auto; padding: 0px 0px 5px 5px;">
+                  
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="halfmargin" style="display:none; margin-left:0px;">
+              <table id="ctl00_Main_SeekerID" cellpadding="5" cellspacing="5">
+      <tr>
+          <td>
+                                      
+                                      
+                                  </td>
+      </tr>
+  </table>
+  
+               
+            </div>     
+            
+          </td>
+        </tr>
+      </table>
+      
+      
+      <input type="hidden" id="ctl00_Main_DeactivateAccountPopupControlWS" name="ctl00_Main_DeactivateAccountPopupControlWS" value="0:0:-1:-10000:-10000:0:-10000:-10000:1:0:0:0" /><script id="dxis_1757164268" src="/DXR.axd?r=1_142-a0W17" type="text/javascript"></script><script id="dxis_1798075283" src="/DXR.axd?r=1_80-a0W17" type="text/javascript"></script><script id="dxis_1340453738" src="/DXR.axd?r=1_135-a0W17" type="text/javascript"></script><script id="dxis_1772886379" src="/DXR.axd?r=1_77-a0W17" type="text/javascript"></script><script id="dxis_659215624" src="/DXR.axd?r=1_128-a0W17" type="text/javascript"></script><script id="dxis_995228090" src="/DXR.axd?r=1_126-a0W17" type="text/javascript"></script><script id="dxis_2051470368" src="/DXR.axd?r=1_98-a0W17" type="text/javascript"></script><script id="dxis_1344350214" src="/DXR.axd?r=1_104-a0W17" type="text/javascript"></script><script id="dxis_2051519113" src="/DXR.axd?r=1_91-a0W17" type="text/javascript"></script><div id="ctl00_Main_DeactivateAccountPopupControl_PW-1" style="position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+      <table id="ctl00_Main_DeactivateAccountPopupControl_PWST-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:relative;">
+          <tr>
+              <td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_Main_DeactivateAccountPopupControl&#39;,-1,false)" style="width:200px;cursor:default;"><table id="ctl00_Main_DeactivateAccountPopupControl_CLW-1" cellspacing="0" cellpadding="0" border="0" style="width:200px;border-collapse:collapse;border-collapse:separate;">
+                  <tr>
+                      <td id="ctl00_Main_DeactivateAccountPopupControl_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_Main_DeactivateAccountPopupControl&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+                          <tr>
+                              <td id="ctl00_Main_DeactivateAccountPopupControl_PWH-1T" class="dxpc" style="width:100%;">Confirmez la d&#233;sactivation du compte</td><td class="dxpcHBCell"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+                                  <tr>
+                                      <td id="ctl00_Main_DeactivateAccountPopupControl_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(event, &#39;ctl00_Main_DeactivateAccountPopupControl&#39;,-1)" onmousedown="return aspxPWHMDown(event);" style="cursor:pointer;"><img id="ctl00_Main_DeactivateAccountPopupControl_HCB-1Img" class="dxWeb_pcCloseButton" src="/DXR.axd?r=1_9-a0W17" alt="[Close]" /></td>
+                                  </tr>
+                              </table></td>
+                          </tr>
+                      </table></td>
+                  </tr><tr>
+                      <td id="ctl00_Main_DeactivateAccountPopupControl_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;border-bottom-width:0px;"><div id="ctl00_Main_DeactivateAccountPopupControl_CSD-1" class="dxpcContentPaddings">
+                          
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="3">
+                  <span class="dxeBase AllTextRed" id="ctl00_Main_DeactivateAccountPopupControl_lblDeactivateMessage">Apr&#232;s avoir confirmer la d&#233;sactivation du compte, vous serez d&#233;connect&#233; et votre compte sera supprim&#233; de notre base de donn&#233;es.</span><script id="dxss_790755736" type="text/javascript">
+  <!--
+  aspxAddDisabledItems('ctl00_Main_DeactivateAccountPopupControl_lblDeactivateMessage',[[['dxeDisabled'],[''],['']]]);
+  
+  var dxo = new ASPxClientLabel('ctl00_Main_DeactivateAccountPopupControl_lblDeactivateMessage');
+  window['lblDeactivateMessage'] = dxo;
+  dxo.uniqueID = 'ctl00$Main$DeactivateAccountPopupControl$lblDeactivateMessage';
+  dxo.InlineInitialize();
+  
+  //-->
+  </script>
+                  <p />
+                </td>
+              </tr>
+              <tr>
+                <td align="right">
+                  <table cellspacing="0" cellpadding="0" id="ctl00_Main_DeactivateAccountPopupControl_btOK" border="0" style="width:80px;border-collapse:collapse;border-collapse:separate;-khtml-user-select:none;">
+                              <tr>
+                                  <td id="ctl00_Main_DeactivateAccountPopupControl_btOK_B" class="dxbButton" align="center"><div style="border-width:0;width:0;height:0;opacity:0;padding:0;margin:0;overflow:hidden;">
+                                      <input value="" onfocus="aspxBGotFocus(&#39;ctl00_Main_DeactivateAccountPopupControl_btOK&#39;)" type="submit" name="ctl00$Main$DeactivateAccountPopupControl$btOK" readonly="readonly" style="border-width:0px;height:0px;width:0px;padding:0;border-width:0;width:1px;height:1px;opacity:0;margin:0;position:relative;" />
+                                  </div><div id="ctl00_Main_DeactivateAccountPopupControl_btOK_CD" class="dxb">
+                                      <span>OK</span>
+                                  </div></td>
+                              </tr>
+                          </table><script id="dxss_889967769" type="text/javascript">
+  <!--
+  aspxAddHoverItems('ctl00_Main_DeactivateAccountPopupControl_btOK',[[['dxbButtonHover'],[''],['B'],['','TC'],[['']],['Img']]]);
+  aspxAddPressedItems('ctl00_Main_DeactivateAccountPopupControl_btOK',[[['dxbButtonPressed'],[''],['B'],['','TC'],[['']],['Img']]]);
+  
+  var dxo = new ASPxClientButton('ctl00_Main_DeactivateAccountPopupControl_btOK');
+  window['ctl00_Main_DeactivateAccountPopupControl_btOK'] = dxo;
+  dxo.uniqueID = 'ctl00$Main$DeactivateAccountPopupControl$btOK';
+  dxo.RegisterServerEventAssigned(['Click']);
+  aspxAddSelectedItems('ctl00_Main_DeactivateAccountPopupControl_btOK',[[['dxbf'],[''],['CD']]]);
+  dxo.InlineInitialize();
+  
+  //-->
+  </script>
+                </td>
+                <td>
+                  <div style="width: 8px;">
+                  </div>
+                </td>
+                <td align="left">
+                  <table cellspacing="0" cellpadding="0" id="ctl00_Main_DeactivateAccountPopupControl_btCancel" border="0" style="width:80px;border-collapse:collapse;border-collapse:separate;-khtml-user-select:none;">
+                              <tr>
+                                  <td id="ctl00_Main_DeactivateAccountPopupControl_btCancel_B" class="dxbButton" align="center"><div style="border-width:0;width:0;height:0;opacity:0;padding:0;margin:0;overflow:hidden;">
+                                      <input value="" onfocus="aspxBGotFocus(&#39;ctl00_Main_DeactivateAccountPopupControl_btCancel&#39;)" type="submit" name="ctl00$Main$DeactivateAccountPopupControl$btCancel" readonly="readonly" style="border-width:0px;height:0px;width:0px;padding:0;border-width:0;width:1px;height:1px;opacity:0;margin:0;position:relative;" />
+                                  </div><div id="ctl00_Main_DeactivateAccountPopupControl_btCancel_CD" class="dxb">
+                                      <span>Cancel</span>
+                                  </div></td>
+                              </tr>
+                          </table><script id="dxss_1710725259" type="text/javascript">
+  <!--
+  aspxAddHoverItems('ctl00_Main_DeactivateAccountPopupControl_btCancel',[[['dxbButtonHover'],[''],['B'],['','TC'],[['']],['Img']]]);
+  aspxAddPressedItems('ctl00_Main_DeactivateAccountPopupControl_btCancel',[[['dxbButtonPressed'],[''],['B'],['','TC'],[['']],['Img']]]);
+  aspxAddDisabledItems('ctl00_Main_DeactivateAccountPopupControl_btCancel',[[['dxbDisabled'],[''],['B'],['','TC'],[['']],['Img']]]);
+  
+  var dxo = new ASPxClientButton('ctl00_Main_DeactivateAccountPopupControl_btCancel');
+  window['ctl00_Main_DeactivateAccountPopupControl_btCancel'] = dxo;
+  dxo.uniqueID = 'ctl00$Main$DeactivateAccountPopupControl$btCancel';
+  dxo.Click.AddHandler(function(s, e) {DeactivateAccountPopupControl.Hide();});
+  aspxAddSelectedItems('ctl00_Main_DeactivateAccountPopupControl_btCancel',[[['dxbf'],[''],['CD']]]);
+  dxo.InlineInitialize();
+  
+  //-->
+  </script>
+                </td>
+              </tr>
+            </table>
+          
+                      </div></td>
+                  </tr><tr>
+                      <td id="ctl00_Main_DeactivateAccountPopupControl_PWF-1" class="dxpcFooter"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+                          <tr>
+                              <td id="ctl00_Main_DeactivateAccountPopupControl_PWF-1T" class="dxpc" style="width:100%;"></td>
+                          </tr>
+                      </table></td>
+                  </tr>
+              </table></td><td style="background:url('/DXR.axd?r=1_62-a0W17') no-repeat left top;"></td>
+          </tr><tr>
+              <td style="background:url('/DXR.axd?r=1_61-a0W17') no-repeat left top;"></td><td style="background:url('/DXR.axd?r=1_63-a0W17') no-repeat left top;"><div style="height:5px;width:5px;">
+  
+              </div></td>
+          </tr>
+      </table>
+  </div><div id="ctl00_Main_DeactivateAccountPopupControl_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+  
+  </div><table id="ctl00_Main_DeactivateAccountPopupControl_LP" class="dxpcLoadingPanel" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;left:0px;top:0px;z-index:30000;display:none;">
+      <tr>
+          <td class="dx" style="padding-right:8px;"><img src="/DXR.axd?r=1_48-a0W17" alt="" align="middle" /></td><td class="dx" style="padding-left:0px;"><span id="ctl00_Main_DeactivateAccountPopupControl_TL">Loading&hellip;</span></td>
+      </tr>
+  </table><div id="ctl00_Main_DeactivateAccountPopupControl_LD" class="dxpcLoadingDiv" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+  
+  </div><script id="dxss_959506466" type="text/javascript">
+  <!--
+  aspxAddHoverItems('ctl00_Main_DeactivateAccountPopupControl',[[['dxpcCloseButtonHover'],[''],['HCB-1'],,[['']],['Img']],[['dxpcPinButtonHover'],[''],['HPB-1'],,[['']],['Img']],[['dxpcRefreshButtonHover'],[''],['HRB-1'],,[['']],['Img']],[['dxpcCollapseButtonHover'],[''],['HMNB-1'],,[['']],['Img']],[['dxpcMaximizeButtonHover'],[''],['HMXB-1'],,[['']],['Img']]]);
+  
+  var dxo = new ASPxClientPopupControl('ctl00_Main_DeactivateAccountPopupControl');
+  window['DeactivateAccountPopupControl'] = dxo;
+  dxo.callBack = function(arg) { WebForm_DoCallback('ctl00$Main$DeactivateAccountPopupControl',arg,aspxCallback,'ctl00_Main_DeactivateAccountPopupControl',aspxCallbackError,true); };
+  dxo.uniqueID = 'ctl00$Main$DeactivateAccountPopupControl';
+  dxo.popupAnimationType='fade';
+  dxo.popupHorizontalAlign='WindowCenter';
+  dxo.popupVerticalAlign='WindowCenter';
+  dxo.isPopupPositionCorrectionOn=false;
+  dxo.allowDragging=true;
+  dxo.width=0;
+  dxo.height=0;
+  dxo.autoUpdatePosition = true;
+  aspxAddSelectedItems('ctl00_Main_DeactivateAccountPopupControl',[[['dxpcPinButtonChecked'],[''],['HPB-1'],,[['']],['Img']],[['dxpcCollapseButtonChecked'],[''],['HMNB-1'],,[['']],['Img']],[['dxpcMaximizeButtonChecked'],[''],['HMXB-1'],,[['']],['Img']]]);
+  dxo.InlineInitialize();
+  
+  //-->
+  </script>
+    </center>
+  
+                  
+    </div>
+    
+  
+  <script type="text/javascript">
+  //<![CDATA[
+  
+  var callBackFrameUrl='/WebResource.axd?d=9u8KIEFlJHex5N-u04kXBHN00Z6xvT0rfW6w5y3kDRAei8IwvHhwi9561LJ42mQX_ExO1yQqN1aasHu5MT3AylwfFAXt0drIEjs-fNiShbA1&t=637100518460000000';
+  WebForm_InitCallback();//]]>
+  </script>
+  </form>
+
+  <style>
+    html
+{
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body
+{
+    position: relative;
+    margin: 0px;
+    min-height: 100%;
+    font: 22px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    background-color: #fff;
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+}
+
+    body#s0
+    {
+        background-color: #303030;
+    }
+
+form
+{
+    margin: 0px;
+}
+
+img
+{
+    border: 0px;
+}
+
+a img
+{
+    text-decoration: none;
+    border: 0 none;
+}
+
+a:hover
+{
+    opacity: 0.7;
+}
+
+p
+{
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+    -webkit-text-size-adjust: 100%;
+    font-size: inherit;
+}
+
+    p.flush
+    {
+        margin: 0px 0px 5px 0px;
+    }
+
+strong
+{
+    font-weight: 600;
+}
+
+ul
+{
+    padding: 0px 0px 5px 24px;
+    margin: 0px;
+}
+
+li
+{
+    padding-bottom: 0px;
+}
+
+
+div#mainHeader
+{
+    position: fixed;
+    top: 0px;
+    z-index: 200;
+    width: 100%;
+    height: 89px;
+    background-color: #fff;
+    box-shadow: 0px 0px 16px #313131;
+    margin: 0px 0px 0px 0px;
+}
+
+div#headerg
+{
+    position: fixed;
+    top: 0px;
+    z-index: 200;
+    width: 100%;
+    height: 89px;
+    background-color: #abca41;
+    box-shadow: 0px 0px 16px #313131;
+    margin: 0px 0px 0px 0px;
+}
+
+div#mainMenu
+{
+    padding: 17px 40px 0px 40px;
+    white-space: nowrap;
+    min-width: 845px;
+    text-align: right;
+}
+
+    div#mainMenu img.right
+    {
+        width: 620px;
+        margin-top: 4px;
+        float: right;
+    }
+
+    div#mainMenu a#mm0, div#mainMenu a.mm0
+    {
+        float: left;
+    }
+
+        div#mainMenu a#mm0 img, div#mainMenu a.mm0 img
+        {
+            width: 300px;
+            height: 51px;
+        }
+
+    div#mainMenu a
+    {
+        display: inline-block;
+        padding: 0px 10px 0px 10px;
+        font: 24px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        color: #313131;
+        text-decoration: none;
+        margin: 5px 5px;
+    }
+
+        div#mainMenu a.mm1, div#mainMenu a.mm2
+        {
+            font: 24px chalk, Arial;
+            color: #313131;
+        }
+
+        div#mainMenu a#mm5
+        {
+            border: 1px solid #313131;
+            padding: 5px 10px 2px 10px;
+        }
+
+div.subMenuBox
+{
+    position: fixed;
+    top: 85px;
+    left: 0px;
+    background-color: rgba(171,201,65,0.9);
+    z-index: 190;
+    width: 100%;
+    /*height: 40px;*/
+    padding: 10px 0px 5px 0px;
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    font: 15px Arial;
+    font-weight: 300;
+    color: #000;
+}
+
+    div.subMenuBox.hidden
+    {
+        top: -63px;
+    }
+
+div#topBannerSpace
+{
+    height: 89px;
+}
+
+div#topBanner
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    overflow: hidden;
+}
+
+body#s1 div#topBanner
+{
+    background-image: url(images/bkg_about.jpg);
+    height: 904px;
+    border-bottom: 0px solid #90ae2c;
+}
+
+body#s2 div#topBanner
+{
+    background-image: url(images/banner_blackboard.jpg);
+    height: 1000px;
+}
+
+body#s4.p1 div#topBanner
+{
+    background-image: url(images/banner_blackboard2.jpg);
+    height: 900px;
+}
+
+body#s9.p1 div#topBanner
+{
+    background-image: url(images/bkg_career.jpg);
+    height: 900px;
+}
+
+.MainContent
+{
+    text-align:center; 
+    width:770px; 
+    margin:0 auto;
+    padding-top:40px;
+}
+
+@media (min-width: 1480px)
+{
+    body#s9.p1 div#topBanner
+    {
+        background-position-y: -20px;
+    }
+}
+
+@media (min-width: 1520px)
+{
+    body#s9.p1 div#topBanner
+    {
+        background-position-y: -40px;
+    }
+}
+
+@media (min-width: 1620px)
+{
+    body#s9.p1 div#topBanner
+    {
+        background-position-y: -80px;
+    }
+}
+
+@media (min-width: 1800px)
+{
+    body#s9.p1 div#topBanner
+    {
+        background-position-y: -120px;
+    }
+}
+
+body#s6.p1 div#topBanner
+{
+    background-image: url(images/bkg_blackboard.jpg);
+    height: 300px;
+    border-bottom: 0px solid #90ae2c;
+}
+
+body#s7.p1 div#topBanner
+{
+    background-image: url(images/bkg_blackboard.jpg);
+    height: 300px;
+    border-bottom: 0px solid #90ae2c;
+}
+
+
+
+body#s5 div#topBanner
+{
+    background-image: url(images/banner_contact.jpg);
+    height: 800px;
+    border-bottom: 0px solid #90ae2c;
+}
+
+body#s3 div#topBanner, body#s6 div#topBanner, body#s7 div#topBanner, body#s8 div#topBanner
+{
+    background-image: url(images/banner_blackboard.jpg);
+    height: 330px;
+    border-bottom: 0px solid #90ae2c;
+}
+
+div#topBanner div.content
+{
+    color: #fff;
+    font: 34px/42px 'Source Sans Pro', Arial;
+    font-weight: 300;
+}
+
+body#s5 div#topBanner div.content
+{
+    color: #fff;
+    font: 24px/32px 'Source Sans Pro', Arial;
+    font-weight: 300;
+}
+
+body#s5 div#topBanner div.floatLeft
+{
+    padding-right: 40px;
+}
+
+div#topBanner h1
+{
+    font: 86px/86px chalk, Arial;
+    margin: 30px 0px 20px 0px;
+    color: #ffffff;
+}
+
+body#s3 div#topBanner h1, body#s6 div#topBanner h1, body#s7 div#topBanner h1, body#s8 div#topBanner h1
+{
+    margin: 30px 0px 20px 0px;
+}
+
+body#s6 div#topBanner a, body#s7 div#topBanner a, body#s8 div#topBanner a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+div#topBanner a.HL
+{
+    font-weight: bold;
+}
+
+div#searchBox
+{
+    position: fixed;
+    top: 89px;
+    left: 0px;
+    background-color: rgba(171,201,65,0.9);
+    z-index: 190;
+    width: 100%;
+    height: 152px;
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+}
+
+    div#searchBox.hidden
+    {
+        top: -63px;
+    }
+
+form#searchForm
+{
+    width: 1040px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    white-space: nowrap;
+}
+
+div.formBox
+{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}
+
+div#findJob
+{
+    width: 480px;
+    font: 36px/38px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    color: #fff;
+}
+
+div#findUs
+{
+    width: 242px;
+    border-left: 4px solid #4b4b4b;
+    border-right: 4px solid #4b4b4b;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div#findStaff
+{
+    padding-left: 20px;
+}
+
+div.formBox h2
+{
+    font: 36px/38px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    color: #fff;
+    margin: 30px 0px 5px 0px;
+    text-align: center;
+}
+
+div.formBox select
+{
+    font: 18px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    color: #979797;
+    height: 43px;
+    line-height: 43px;
+    padding-left: 10px;
+    padding-right: 40px;
+    vertical-align: middle;
+    width: 240px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    border: 1px solid #979797;
+    border-radius: 0px;
+    background-image: url(/images/arrow_d.svg);
+    background-size: 36px 15px;
+    background-repeat: no-repeat;
+    background-position: right 17px;
+}
+
+div#findJob select
+{
+    width: 216px;
+}
+
+div#logInBox
+{
+    position: fixed;
+    top: 89px;
+    right: 100px;
+    background-color: #abc941;
+    border: 0px solid #000;
+    z-index: 195;
+    width: 630px;
+    height: 93px;
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+}
+
+    div#logInBox.hidden
+    {
+        top: -6px;
+    }
+
+form#logInForm
+{
+    padding: 30px 20px;
+    font-size: 0px;
+}
+
+    form#logInForm input[type="text"], form#logInForm input[type="password"]
+    {
+        font: 18px 'Source Sans Pro', Arial;
+        font-weight: 400;
+        height: 34px;
+        line-height: 34px;
+        padding: 0px 10px;
+        vertical-align: middle;
+        width: 240px;
+        border: 0px;
+        background-color: #fff !important;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+input#loginBtn
+{
+    width: 41px;
+    height: 30px;
+    margin: 2px 0px 0px 4px;
+}
+
+form#logInForm div.formBox
+{
+    text-align: right;
+}
+
+a#forgot
+{
+    font: 15px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    color: #000;
+    margin-right: 10px;
+}
+
+a.btnGreen
+{
+    background-color: #90ae2c;
+    display: inline-block;
+    color: #ffffff;
+    font: 34px/34px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    padding: 16px 30px 16px 30px;
+    cursor: pointer;
+}
+
+a.btnGreensm
+{
+    background-color: #90ae2c;
+    display: inline-block;
+    color: #ffffff;
+    font: 18px/20px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+div#home1
+{
+    overflow: hidden;
+}
+
+div#homeBkgCon
+{
+    position: relative;
+    text-align: center;
+    background-image: url(images/bkg_blackboard.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 0px;
+    height: 691px;
+    overflow: hidden;
+}
+
+div#homeSlide img
+{
+    cursor: pointer;
+    max-width: 1050px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    z-index: 15;
+    margin-left: -500px;
+}
+
+    div#homeSlide img.anim
+    {
+        transition: left 250ms ease-in-out;
+        -webkit-transition: left 250ms ease-in-out;
+        -moz-transition: left 250ms ease-in-out;
+        -ms-transition: left 250ms ease-in-out;
+    }
+
+    div#homeSlide img.left
+    {
+        left: -50%;
+    }
+
+    div#homeSlide img.right
+    {
+        left: 150%;
+    }
+
+div#homeSlide.hidden
+{
+    display: none;
+}
+
+div#homeSlide.shown
+{
+    display: block;
+}
+
+div#homeBkgCon4
+{
+    position: relative;
+    text-align: center;
+    background-image: url(images/bkg_blackboard.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 0px;
+    padding-top: 89px;
+    height: 610px;
+    overflow: hidden;
+}
+
+div#homeSlide.demo4 img
+{
+    cursor: pointer;
+    max-width: 1050px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    z-index: 15;
+    margin-left: -500px;
+}
+
+    div#homeSlide.demo4 img.anim
+    {
+        transition: left 250ms ease-in-out;
+        -webkit-transition: left 250ms ease-in-out;
+        -moz-transition: left 250ms ease-in-out;
+        -ms-transition: left 250ms ease-in-out;
+    }
+
+    div#homeSlide.demo4 img.left
+    {
+        left: -50%;
+    }
+
+    div#homeSlide.demo4 img.right
+    {
+        left: 150%;
+    }
+
+div#homeSlide.demo4.hidden
+{
+    display: none;
+}
+
+div#homeSlide.demo4.shown
+{
+    display: block;
+}
+
+div#vidCon
+{
+    height: 691px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+}
+
+    div#vidCon.hidden
+    {
+        display: none;
+    }
+
+    div#vidCon.shown
+    {
+        display: block;
+    }
+
+div.content
+{
+    font: 21px/27px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > div.content
+{
+    padding: 30px 0px 40px 0px;
+}
+
+div.homeBox
+{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 20;
+    top: -34px;
+}
+
+    div.homeBox h2
+    {
+        font: 40px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        color: #90ae2c;
+        margin: 20px 0px 5px 0px;
+    }
+
+    div.homeBox select
+    {
+        font: 20px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        padding: 4px 20px 2px 10px;
+        min-width: 230px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        cursor: pointer;
+        border: 1px solid #979797;
+        border-radius: 0px;
+        color: #979797;
+    }
+
+    div.homeBox img.circ
+    {
+        min-width: 147px;
+        min-height: 147px;
+    }
+
+    div.homeBox img.searchGlass
+    {
+        position: absolute;
+        bottom: 3px;
+        right: 6px;
+        cursor: pointer;
+    }
+
+    div.homeBox#hb2
+    {
+        margin: 0px 45px;
+    }
+
+div.content2
+{
+    font: 21px/27px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > div.content2
+{
+    padding: 60px 0px 40px 0px;
+}
+
+div.content2 strong
+{
+    font-weight: 600;
+}
+
+img.botArrow
+{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+div#botSlideCon
+{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 690px;
+    height: 125px;
+    overflow: hidden;
+}
+
+    div#botSlideCon div.anim
+    {
+        transition: left 250ms ease-in-out;
+        -webkit-transition: left 250ms ease-in-out;
+        -moz-transition: left 250ms ease-in-out;
+        -ms-transition: left 250ms ease-in-out;
+    }
+
+    div#botSlideCon div
+    {
+        position: absolute;
+        top: 69px;
+        left: 0px;
+        z-index: 15;
+        width: 690px;
+        height: 52px;
+        font: 21px/24px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+    div#botSlideCon h3
+    {
+        font: 42px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        margin: 15px 0px 0px 0px;
+    }
+
+    div#botSlideCon div.left
+    {
+        left: -100%;
+    }
+
+    div#botSlideCon div.right
+    {
+        left: 150%;
+    }
+
+div#home2
+{
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    z-index: 150;
+    padding: 40px 0px 0px 0px;
+}
+
+    div#home2 div.content img.top
+    {
+        margin-top: -32px;
+        margin-bottom: 70px;
+    }
+
+    div#home2 div.content img.bottom
+    {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+form#homeForm
+{
+    font: 28px/29px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+    form#homeForm label
+    {
+        vertical-align: middle;
+        margin: 0px 20px 0px 0px;
+    }
+
+    form#homeForm select
+    {
+        font: 18px 'Source Sans Pro', Arial;
+        font-weight: 400;
+        color: #979797;
+        height: 43px;
+        line-height: 43px;
+        padding-left: 10px;
+        padding-right: 10px;
+        vertical-align: middle;
+        width: 240px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        cursor: pointer;
+        border: 1px solid #979797;
+        border-radius: 0px;
+        background-image: url(/images/arrow_d.svg);
+        background-size: 36px 15px;
+        background-repeat: no-repeat;
+        background-position: right 17px;
+    }
+
+form#workForm
+{
+    font: 28px/29px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    padding: 50px 0px;
+    background-color: #dedede;
+    text-align: center;
+}
+
+    form#workForm label
+    {
+        display: block;
+        font: 50px/50px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        vertical-align: middle;
+        margin: 0px 20px 20px 0px;
+    }
+
+    form#workForm select
+    {
+        font: 18px 'Source Sans Pro', Arial;
+        font-weight: 400;
+        color: #979797;
+        height: 43px;
+        line-height: 43px;
+        padding-left: 10px;
+        padding-right: 40px;
+        vertical-align: middle;
+        width: 240px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        cursor: pointer;
+        border: 1px solid #979797;
+        border-radius: 0px;
+        background-image: url(images/arrow_d.svg);
+        background-size: 36px 15px;
+        background-repeat: no-repeat;
+        background-position: right 17px;
+    }
+
+
+div.collapseBox
+{
+    position: relative;
+    z-index: 20;
+    min-height: 288px;
+}
+
+    div.collapseBox div.tab
+    {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        margin-left: -232px;
+        width: 464px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        div.collapseBox div.tab h2
+        {
+            font: 50px/50px 'Source Sans Pro', Arial;
+            font-weight: 400;
+            margin: 20px 0px 5px 0px;
+            text-transform: uppercase;
+            color: inherit;
+        }
+
+    div.collapseBox.noclick div.tab
+    {
+        cursor: default;
+    }
+
+div.expand
+{
+    display: inline-block;
+}
+
+div.close
+{
+    display: none;
+}
+
+div.collapseBox > div.content
+{
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    max-height: 248px;
+    -webkit-filter: blur(2px); /* Chrome, Safari, Opera */
+    filter: blur(2px);
+    padding: 40px 0px 0px 0px;
+}
+
+div.collapseBox.open > div.content
+{
+    max-height: 9999px;
+    -webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+    filter: blur(0px);
+    padding: 80px 0px 0px 0px;
+}
+
+div.collapseBox.open div.expand
+{
+    display: none;
+}
+
+div.collapseBox.open div.close
+{
+    display: inline-block;
+}
+
+div#solutions, div#community
+{
+    background-color: #fff;
+    overflow: auto;
+}
+
+div#careers
+{
+    background-color: #fff;
+    overflow: auto;
+    padding-bottom: 40px;
+}
+
+div#team, div#testimonials, div#specialties
+{
+    background-color: #e9e9e9;
+    overflow: auto;
+}
+
+div.content h2
+{
+    font: 50px/50px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    margin: 40px 0px 25px 0px;
+    text-transform: uppercase;
+    color: inherit;
+    text-align: center;
+}
+
+div.member
+{
+    position: relative;
+    width: 306px;
+    height: 378px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: center;
+}
+
+    div.member h3
+    {
+        width: 100%;
+        text-align: center;
+        height: 88px;
+        color: #000;
+        margin: 0px;
+        font: 30px/30px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+    div.member div.desc
+    {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #90ae2c;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        color: #fff;
+        font: 22px/26px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+        div.member div.desc div.PAD
+        {
+            padding: 20px;
+            text-align: left;
+        }
+
+        div.member div.desc p
+        {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div.member div.desc li
+        {
+            padding-bottom: 2px;
+            font: 16px 'Source Sans Pro', Arial;
+            font-weight: 300;
+        }
+
+    div.member:hover div.desc, div.specialty.HL div.desc
+    {
+        display: block;
+    }
+
+    div.member.mid
+    {
+        margin: 0px 40px 40px 40px;
+    }
+
+    div.member div.imgCon
+    {
+        overflow: hidden;
+        width: 100%;
+        height: 306px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0px 20px 20px 0px;
+        float: left;
+    }
+
+div.posting
+{
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    max-height: 68px;
+}
+
+    div.posting.open
+    {
+        transition: 400ms ease-in-out;
+        -webkit-transition: 400ms ease-in-out;
+        -moz-transition: 400ms ease-in-out;
+        -webkit-backface-visibility: hidden;
+        overflow: hidden;
+        max-height: 3000px;
+    }
+
+div.collapseBox.open div.posting div.expand
+{
+    display: inline-block;
+}
+
+div.collapseBox.open div.posting div.close
+{
+    display: none;
+}
+
+div.collapseBox.open div.posting.open div.expand
+{
+    display: none;
+}
+
+div.collapseBox.open div.posting.open div.close
+{
+    display: inline-block;
+}
+
+div.postingInfo
+{
+    padding: 20px 0px 0px 0px;
+}
+
+div.postBtn
+{
+    cursor: pointer;
+}
+
+div.collapseBox#testimonials > div.content
+{
+}
+
+div.testimonial
+{
+    position: relative;
+    padding: 0px 0px 20px 0px;
+}
+
+    div.testimonial div.logo
+    {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0px 10px 0px 0px;
+    }
+
+    div.testimonial div.desc
+    {
+        display: inline-block;
+        vertical-align: top;
+        width: 710px;
+        font: 19px/22px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+        div.testimonial div.desc div.PAD
+        {
+            padding: 0px;
+            text-align: left;
+        }
+
+        div.testimonial div.desc p
+        {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div.testimonial div.desc li
+        {
+            padding-bottom: 2px;
+            font: 16px 'Source Sans Pro', Arial;
+            font-weight: 300;
+        }
+
+    div.testimonial div.quotee
+    {
+        display: inline;
+        font-weight: normal;
+        padding: 0px;
+    }
+
+div.quotee
+{
+    font-weight: bold;
+    padding: 20px 0px 0px 0px;
+}
+
+div.community
+{
+    position: relative;
+    padding: 0px 0px 30px 0px;
+}
+
+    div.community div.logo
+    {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0px 10px 0px 0px;
+    }
+
+        div.community div.logo img
+        {
+            max-width: 280px;
+        }
+
+    div.community div.desc
+    {
+        display: inline-block;
+        vertical-align: top;
+        width: 640px;
+        font: 20px/22px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+        div.community div.desc div.PAD
+        {
+            padding: 0px;
+            text-align: left;
+        }
+
+        div.community div.desc p
+        {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div.community div.desc li
+        {
+            padding-bottom: 2px;
+            font: 16px 'Source Sans Pro', Arial;
+            font-weight: 300;
+        }
+
+div.awards
+{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0;
+}
+
+div.awardCon
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 470px;
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+    div.awardCon.first
+    {
+        margin-right: 20px;
+        margin-left: 0px;
+    }
+
+    div.awardCon div.pic
+    {
+    }
+
+    div.awardCon div.desc
+    {
+        text-align: left;
+        font: 22px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        padding: 0px 0px 0px 0px;
+    }
+
+        div.awardCon div.desc h3
+        {
+            font: 26px 'Source Sans Pro', Arial;
+            font-weight: 300;
+            font-weight: bold;
+            margin: 0px 0px 10px 0px;
+        }
+
+    div.awardCon p
+    {
+        width: auto;
+    }
+
+div.collapseBox#specialties > div.content
+{
+    width: 100%;
+}
+
+div#specialties > h3
+{
+    color: #000;
+    margin: 0px;
+    font: 28px/30px 'Source Sans Pro', Arial;
+    font-weight: 400;
+}
+
+div.specialty
+{
+    position: relative;
+    width: 306px;
+    height: 418px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: center;
+}
+
+    div.specialty h3
+    {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        height: 88px;
+        z-index: 50;
+        color: #000;
+        margin: 0px;
+        font: 30px/30px 'Source Sans Pro', Arial;
+        font-weight: 400;
+    }
+
+    div.specialty a
+    {
+        color: #fff;
+    }
+
+    div.specialty:hover h3, div.specialty.HL h3
+    {
+        color: #fff;
+    }
+
+    div.specialty div.desc
+    {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.75);
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        color: #fff;
+        font: 20px/24px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+        div.specialty div.desc div.PAD
+        {
+            padding: 20px;
+            text-align: left;
+        }
+
+        div.specialty div.desc p
+        {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div.specialty div.desc li
+        {
+            padding-bottom: 2px;
+            font: 16px 'Source Sans Pro', Arial;
+            font-weight: 300;
+        }
+
+        div.specialty div.desc div.ital
+        {
+            font: 14px/18px 'Source Sans Pro', Arial;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+    div.specialty:hover div.desc, div.specialty.HL div.desc
+    {
+        display: block;
+    }
+
+    div.specialty.mid
+    {
+        margin: 0px 40px 40px 40px;
+    }
+
+div.solutionB
+{
+    position: relative;
+    width: 308px;
+    height: 389px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: center;
+}
+
+    div.solutionB h3
+    {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        height: 88px;
+        z-index: 50;
+        color: #000;
+        margin: 0px;
+        font: 30px/30px 'Source Sans Pro', Arial;
+        font-weight: 400;
+    }
+
+    div.solutionB:hover h3, div.solutionB.HL h3
+    {
+        color: #fff;
+    }
+
+    div.solutionB img
+    {
+        margin-top: 20px;
+    }
+
+    div.solutionB div.desc
+    {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.75);
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        color: #fff;
+        font: 20px/24px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+        div.solutionB div.desc div.PAD
+        {
+            padding: 20px;
+            text-align: left;
+        }
+
+        div.solutionB div.desc p
+        {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div.solutionB div.desc li
+        {
+            padding-bottom: 2px;
+            font: 16px 'Source Sans Pro', Arial;
+            font-weight: 300;
+        }
+
+    div.solutionB:hover div.desc, div.solutionB.HL div.desc
+    {
+        display: block;
+    }
+
+    div.solutionB.mid
+    {
+        margin: 0px 40px 40px 40px;
+    }
+
+div.collapseBox#solutions > div.content
+{
+    width: 100%;
+}
+
+div.solution
+{
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    max-height: 68px;
+    border-top: 3px solid #dedede;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+}
+
+    div.solution.first
+    {
+        border-top: 0px;
+    }
+
+    div.solution.open
+    {
+        transition: 400ms ease-in-out;
+        -webkit-transition: 400ms ease-in-out;
+        -moz-transition: 400ms ease-in-out;
+        -webkit-backface-visibility: hidden;
+        overflow: hidden;
+        max-height: 3000px;
+    }
+
+div.collapseBox.open div.solution div.expand
+{
+    display: inline-block;
+}
+
+div.collapseBox.open div.solution div.close
+{
+    display: none;
+}
+
+div.collapseBox.open div.solution.open div.expand
+{
+    display: none;
+}
+
+div.collapseBox.open div.solution.open div.close
+{
+    display: inline-block;
+}
+
+div.solution div.desc
+{
+    padding: 20px 0px 0px 0px;
+    text-align: left;
+    width: 980px;
+    display: inline-block;
+}
+
+div.solutionBtn
+{
+    cursor: pointer;
+}
+
+div.work
+{
+    padding-bottom: 40px;
+}
+
+img#click
+{
+    vertical-align: baseline;
+    width: 99px;
+    height: 22px;
+}
+
+div.work h2
+{
+    font: 50px/50px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px 0px 20px 0px;
+}
+
+div.work div.formCell
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 20px 20px 0px;
+}
+
+    div.work div.formCell select
+    {
+        font: 27px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        color: #979797;
+        padding: 2px 50px 2px 10px;
+        min-width: 230px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        cursor: pointer;
+        border: 1px solid #979797;
+        border-radius: 0px;
+        height: 48px;
+        background-image: url(images/arrow_d.png);
+        background-repeat: no-repeat;
+        background-position: right 17px;
+    }
+
+    div.work div.formCell label
+    {
+        cursor: pointer;
+        padding: 9px 10px 0px 3px;
+        display: inline-block;
+        font: 27px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+div.work input[type="submit"]
+{
+    vertical-align: middle;
+}
+
+    div.work input[type="submit"]:hover
+    {
+        background-color: #fff;
+        color: #979797;
+    }
+
+form#resultsForm
+{
+    margin-top: 30px;
+}
+
+    form#resultsForm fieldset
+    {
+        display: inline-block;
+        padding: 10px;
+        margin-right: 10px;
+        vertical-align: top;
+    }
+
+    form#resultsForm input[type="submit"]
+    {
+        margin-top: 13px;
+        vertical-align: top;
+    }
+
+div#jobResults
+{
+    display: table;
+    margin-bottom: 60px;
+}
+
+div.listing
+{
+    display: table-row;
+}
+
+    div.listing.head
+    {
+        font-weight: bold;
+    }
+
+    div.listing.offRow
+    {
+        background-color: #f0f0f0;
+    }
+
+div.item
+{
+    display: table-cell;
+    padding: 5px 30px 5px 5px;
+    font-size: 18px;
+}
+
+div#toolKit
+{
+    background-color: #dedede;
+    z-index: 30;
+    overflow: auto;
+}
+
+div#tools
+{
+    text-align: center;
+}
+
+div#toolKit div.tab
+{
+    background-color: #dedede;
+    z-index: 35;
+    width: 550px;
+    margin-left: -275px;
+}
+
+div.tool
+{
+    position: relative;
+    width: 306px;
+    padding: 20px 0px 0px 0px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+    div.tool a
+    {
+        text-decoration: none;
+    }
+
+        div.tool a span
+        {
+            display: block;
+            width: 100%;
+            text-align: center;
+            height: 88px;
+            z-index: 50;
+            color: #000;
+            margin: 20px 0px 0px 0px;
+            font: 30px/30px 'Source Sans Pro', Arial;
+            font-weight: 400;
+        }
+
+
+div#documents
+{
+    padding-bottom: 40px;
+}
+
+    div#documents div.content
+    {
+        width: 750px;
+    }
+
+div#docList
+{
+    display: table;
+    margin-bottom: 20px;
+}
+
+    div#docList h3
+    {
+        margin: 20px 0px 0px 0px;
+        font: 24px/26px 'Source Sans Pro', Arial;
+        font-weight: 600;
+    }
+
+    div#docList p
+    {
+        font: 21px/26px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+    div#docList div.item
+    {
+        max-width: 430px;
+        padding-bottom: 30px;
+        vertical-align: top;
+    }
+
+        div#docList div.item img
+        {
+            box-shadow: 3px 3px 20px -2px #111;
+            margin-right: 20px;
+        }
+
+a.docLink
+{
+    background-color: #90ae2c;
+    display: inline-block;
+    color: #ffffff;
+    font: 18px/20px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+div#links
+{
+    padding-bottom: 40px;
+    background-color: #e9e9e9;
+    overflow: auto;
+}
+
+    div#links div.content
+    {
+        width: 750px;
+    }
+
+a.impLink
+{
+    display: block;
+    margin: 0px 0px 20px 0px;
+    font: 24px/26px 'Source Sans Pro', Arial;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+div#articles
+{
+    padding-bottom: 40px;
+}
+
+    div#articles div.content
+    {
+        width: 750px;
+    }
+
+form#regForm
+{
+}
+
+    form#regForm img
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin: 14px 40px 10px 0px;
+    }
+
+    form#regForm fieldset
+    {
+        display: inline-block;
+        vertical-align: top;
+        width: 450px;
+    }
+
+    form#regForm input#agree
+    {
+        float: left;
+        margin: 7px 10px 20px 0px;
+    }
+
+form#timeSheetForm
+{
+}
+
+    form#timeSheetForm img
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0px 40px 10px 0px;
+    }
+
+    form#timeSheetForm div.right
+    {
+        display: inline-block;
+        vertical-align: top;
+        width: 500px;
+    }
+
+        form#timeSheetForm div.right h2
+        {
+            text-align: left;
+            margin: 4px 0px 20px 0px;
+        }
+
+    form#timeSheetForm input#sin
+    {
+        width: 272px;
+    }
+
+    form#timeSheetForm select
+    {
+        width: 294px;
+        vertical-align: top;
+    }
+
+    form#timeSheetForm input#submitBtn
+    {
+        vertical-align: top;
+        padding: 10px 10px 10px 10px;
+    }
+
+div#faq
+{
+}
+
+    div#faq img
+    {
+        float: left;
+        vertical-align: top;
+        margin: 0px 40px 10px 0px;
+    }
+
+    div#faq div.right
+    {
+        display: inline;
+        vertical-align: top;
+        width: 500px;
+    }
+
+        div#faq div.right h2
+        {
+            text-align: left;
+            margin: 4px 0px 20px 0px;
+        }
+
+
+#contactForm h2
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 30px 0px 0px;
+    font: 80px 'Source Sans Pro', Arial;
+    font-weight: 300;
+}
+
+select#contactCat
+{
+    font: 20px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    color: #979797;
+    padding: 2px 50px 2px 10px;
+    min-width: 380px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    border: 1px solid #979797;
+    border-radius: 0px;
+    height: 48px;
+    background-image: url(images/arrow_d.png);
+    background-repeat: no-repeat;
+    background-position: right 17px;
+}
+
+div.contact
+{
+    position: relative;
+    width: 308px;
+    height: 390px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+    div.contact h3
+    {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 100%;
+        text-align: left;
+        z-index: 50;
+        color: #000;
+        margin: 0px;
+        font: 26px/28px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+        div.contact h3.small
+        {
+            font: 22px/28px 'Source Sans Pro', Arial;
+            font-weight: 300;
+        }
+
+    div.contact#contact10 h3
+    {
+        font: 26px/28px 'Source Sans Pro', Arial;
+        font-weight: 300;
+    }
+
+    div.contact h3 strong
+    {
+        display: block;
+        font: 32px/32px 'Source Sans Pro', Arial;
+        font-weight: 600;
+    }
+
+    div.contact:hover h3, div.contact.HL h3
+    {
+        color: #fff;
+    }
+
+    div.contact > img
+    {
+        margin-top: 99px;
+    }
+
+    div.contact div.desc
+    {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #90ae2c;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        color: #fff;
+        font: 23px/27px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        background-image: url(images/contact-email.png);
+        background-repeat: no-repeat;
+        background-position: 235px 22px;
+    }
+
+        div.contact div.desc div.PAD
+        {
+            padding: 130px 25px 20px 25px;
+            text-align: left;
+        }
+
+        div.contact div.desc p
+        {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div.contact div.desc li
+        {
+            padding-bottom: 2px;
+            font: 16px 'Source Sans Pro', Arial;
+            font-weight: 400;
+        }
+
+    div.contact:hover div.desc, div.contact.HL div.desc
+    {
+        display: block;
+    }
+
+    div.contact.mid
+    {
+        margin: 0px 40px 40px 40px;
+    }
+
+
+div.terms > div.content
+{
+    padding-bottom: 40px;
+}
+
+    div.terms > div.content h2 span
+    {
+        display: block;
+        font: 22px/29px 'Source Sans Pro', Arial;
+        font-weight: 600;
+    }
+
+input[type="text"], input[type="password"]
+{
+    font: 18px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    height: 34px;
+    line-height: 34px;
+    padding: 0px 10px;
+    vertical-align: middle;
+    width: 240px;
+    border: 1px solid #9a9a9a;
+    background-color: #fff !important;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]
+{
+    border: 1px solid #90ae2c;
+    background-color: #90ae2c;
+    display: inline-block;
+    color: #ffffff;
+    font: 18px/21px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+input[type="checkbox"]
+{
+    cursor: pointer;
+}
+
+select
+{
+    font: 18px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    color: #979797;    
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    width: 262px;
+    /*-webkit-appearance: none;*/
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    border: 1px solid #979797;
+    border-radius: 0px;
+    background-image: url(/images/arrow_d.svg);
+    background-size: 36px 15px;
+    background-repeat: no-repeat;
+    background-position: right 17px;
+}
+
+    select::-ms-expand
+    {
+        display: none;
+    }
+
+div.miceType
+{
+    font-size: 14px;
+}
+
+div.floatRight
+{
+    float: right;
+    padding: 0px 0px 0px 20px;
+}
+
+div.floatLeft
+{
+    float: left;
+    padding-right: 10px;
+}
+
+div.threeCols, p.threeCols
+{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    column-gap: 40px;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    display: table-cell;
+    padding-bottom: 20px;
+    white-space: nowrap;
+}
+
+    div.threeCols p
+    {
+        display: inline-block;
+        text-align: justify;
+    }
+
+img.centered
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1
+{
+    font: 62px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    color: #313131;
+    margin: 0px 0px 10px 0px;
+    text-transform: uppercase;
+}
+
+    h1 span
+    {
+        display: inline-block;
+        vertical-align: bottom;
+        font: 24px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        padding: 0px 0px 15px 10px;
+    }
+
+img#skyLine
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#mainFooter
+{
+    position: absolute;
+    bottom: 0px;
+    z-index: 90;
+    width: 100%;
+    height: 145px;
+    min-width: 1140px;
+    background-color: #303030;
+    background-image: url(/images/footer_chalkboard.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+    div#mainFooter div.content
+    {
+        text-align: center;
+        padding-top: 20px;
+        font: 24px 'Source Sans Pro', Arial;
+        font-weight: 300;
+        color: #fff;
+    }
+    /*@media (max-width:1330px) {
+		div#footer div.content{text-align:left;}
+	}*/
+    div#mainFooter div.right
+    {
+        position: absolute;
+        top: 54px;
+        right: 30px;
+    }
+
+    div#mainFooter a
+    {
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+
+div#mainFooter div#social a{padding:0px 2px 0px 2px;}
+
+
+div#footerSpace
+{
+    height: 145px;
+    padding-bottom: 15px;
+}
+
+.loadFade
+{
+    opacity: 0;
+}
+
+.blankImg
+{
+    opacity: 0;
+}
+
+@keyframes FadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes FadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes FadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes FadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.fadeItIn
+{
+    -webkit-animation-name: FadeIn;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 500ms;
+    -moz-animation-name: FadeIn;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 500ms;
+    -ms-animation-name: FadeIn;
+    -ms-animation-timing-function: ease-in;
+    -ms-animation-duration: 500ms;
+    animation-name: FadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+}
+
+@keyframes FadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes FadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes FadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes FadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+.fadeItOut
+{
+    opacity: 0;
+    -webkit-animation-name: FadeOut;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: FadeOut;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 1s;
+    -ms-animation-name: FadeOut;
+    -ms-animation-timing-function: ease-out;
+    -ms-animation-duration: 1s;
+    animation-name: FadeOut;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+@keyframes scrollIn1
+{
+    0%
+    {
+        opacity: 0;
+        transform: translate(0px,30px) scale(.5,.5);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translate(0px,0px) scale(1,1);
+    }
+}
+
+@-webkit-keyframes scrollIn1
+{
+    0%
+    {
+        opacity: 0;
+        -webkit-transform: translate(0px,30px) scale(.5,.5);
+    }
+
+    100%
+    {
+        opacity: 1;
+        -webkit-transform: translate(0px,0px) scale(1,1);
+    }
+}
+
+@-moz-keyframes scrollIn1
+{
+    0%
+    {
+        opacity: 0;
+        -moz-transform: translate(0px,30px) scale(.5,.5);
+    }
+
+    100%
+    {
+        opacity: 1;
+        -moz-transform: translate(0px,0px) scale(1,1);
+    }
+}
+
+@-ms-keyframes scrollIn1
+{
+    0%
+    {
+        opacity: 0;
+        -ms-transform: translate(0px,30px) scale(.5,.5);
+    }
+
+    100%
+    {
+        opacity: 1;
+        -ms-transform: translate(0px,0px) scale(1,1);
+    }
+}
+
+.scrlIn1
+{
+    -webkit-animation-name: scrollIn1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 500ms;
+    -moz-animation-name: scrollIn1;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 500ms;
+    -ms-animation-name: scrollIn1;
+    -ms-animation-timing-function: ease-out;
+    -ms-animation-duration: 500ms;
+    animation-name: scrollIn1;
+    animation-timing-function: ease-out;
+    animation-duration: 500ms;
+}
+
+
+.font-weight-400
+{
+    font-weight:400!important;
+}
+
+.font-weight-bold
+{
+    font-weight:bold!important;
+}
+
+.defaultContent
+{
+    width:625px; 
+    padding-bottom: 75px;
+}
+.defaultContentHeader
+{
+    text-align:left; 
+    margin: 5px 0px 0px 0px; 
+    padding: 5px 1px 10px 50px;
+}
+.defaultContentBody
+{
+    padding-left:50px;
+}
+
+.defaultText
+{
+    font: 19px/26px 'Source Sans Pro', Arial;
+    font-weight: 300;
+}
+
+
+.authorisedLeftSubMenu
+{
+    /*width: 450px;*/
+    margin-left: 60px;
+    padding-top: 0px;
+}
+
+.authorisedRightSubMenu
+{
+    margin-right: 60px;
+    /*margin-top: -17px;*/
+}
+
+.topnav
+{
+    float: right;
+    vertical-align: text-top;
+}
+
+.topnav-item
+{
+    display: inline;
+    list-style: none;
+    cursor: pointer;
+    width: 242px;
+    border-right: 2px solid #4b4b4b;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    .topnav-item:hover
+    {
+        opacity: 0.5;
+    }
+
+.display-inline-block
+{
+    display: inline-block;
+}
+
+.margin-top-none
+{
+    margin-top: 0px!important;
+
+}
+.margin-bottom-none
+{
+    margin-bottom: 0px!important;
+
+}
+.padding-top-none
+{
+    padding-top: 0px!important;
+} 
+
+.padding-top-5
+{
+    padding-top:5px;
+}    
+.padding-right-5
+{
+    padding-right:5px;
+}    
+.padding-right-25
+{
+    padding-right:25px;
+}    
+.padding-bottom-5
+{
+    padding-bottom: 5px;
+}
+.padding-left-5
+{
+    padding-left: 5px;
+}
+
+.border-right-none
+{
+    border-right: 0px!important;
+}
+
+.border-solid-black-1
+{
+    border: 1px solid #313131;
+}
+
+.border-bottom-solid-black-1
+{
+    border-bottom: 1px solid #313131;
+}
+
+.float-left
+{
+    float: left;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.text-align-left
+{
+    text-align:left;
+}
+
+.link-color
+{
+    color: #000000;    
+}
+
+.drop-down-list
+{
+    font: 18px 'Source Sans Pro', Arial;
+    font-weight: 400;
+    color: #979797;    
+    height: 34px;
+    line-height: 43px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    width: 262px;
+    /*-webkit-appearance: none!important;*/
+    -moz-appearance: none;
+    text-indent: 0.01px;    
+    cursor: pointer;
+    border: 1px solid #979797;
+    border-radius: 0px;
+    background-image: url(/images/arrow_d.svg);
+    background-size: 30px 9px;
+    background-repeat: no-repeat;
+    background-position: right 10px;
+}
+
+.formLabel {
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px 0px 10px 0px;
+    width: 250px;
+    font: 21px/27px 'Source Sans Pro', Arial;
+    font-weight: 300;
+    text-align: left;
+}
+.ClientTitle
+{
+    font: 28px Arial;
+    color: #313131;
+    display: inline-block;
+    padding: 5px 10px 2px 10px;    
+    margin: 5px 10px;
+}
+
+
+  </style>
+{% endblock %}

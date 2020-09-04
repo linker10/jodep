@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="topBanner">
+</div>
+<div class="content2">
+	<form id="regForm" name="regForm" method="post" accept-charset="utf-8"> {% csrf_token %}
+		<input type="hidden" name="submitted" value="true">
+		<img src="{% static 'images/register.jpg' %}" alt="">
+		<fieldset>
+			<legend><strong>Inscrivez–vous chez Quantum</strong></legend>
+				{% if form.errors %}
+					{{ form.errors }}
+				{% endif %}
+				<input name="username" class="" placeholder="Nom d'utilisateur" value="" type="text" id="username" /><br>
+				<input name="first_name" class="" placeholder="Prénom" value="" type="text" id="fname" /><br>
+				<input name="last_name" class="" placeholder="nom de famille" value="" type="text" id="lname" /><br>
+				<input name="email" class="" placeholder="Adresse courriel" value="" type="text" id="email" /><br>
+				<input name="password" class="" placeholder="Mot de passe" value="" type="password" id="pass" /><br>
+				<input name="password2" placeholder="Confirmer le mot de passe" value="" type="password" id="pass2" /><br>
+				<!-- <input name="SIN3" class="" placeholder="3 derniers chiffres de votre NAS" value="" maxlength="3" type="text" id="SIN3" /><br>
+				<input name="ecode" class="" placeholder="Votre code d'employé *" value="" type="text" id="ecode" /><br>
+		 		-->
+				<input name="agree" value="yes"  type="checkbox" id="agree"> <label for="agree">J’ai lu et j’accepte les modalités de <a href="terms-of-use.php">l'Accord de l'utilisateur</a></label><br>
+				<div align="right"><input type="submit" name="submitBtn" value="Envoyer" id="submitBtn"></div>
+					</fieldset>
+
+	</form>
+
+	<div class="miceType">* Si vous n'avez pas de code d'employé veuillez contacter votre représentant ou l’équipe du Service à la clientèle au 1-866-985-3917.</div>
+</div>
+{% endblock %}

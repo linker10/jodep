@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+Are you sure you want to deactivate your account. Only admin will be able to activate it again.<a href="{% url 'manager:deactivate_confirm' %}" onclick="confirm('Are you sure?');"> Deactivate </a> 
+{% endblock %}

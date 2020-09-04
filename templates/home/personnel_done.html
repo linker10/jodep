@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="topBanner">
+</div>
+<div class="content">
+	<form id="staffForm" name="staffForm" method="post">
+		<input type="hidden" name="staffFormSub" value="true">
+		<fieldset>
+			<legend><strong>Parlez à un expert</strong><br>
+			<br>
+			<p>En quête de personnel? Avec quelques détails seulement, nous pouvons désigner le gestionnaire en solutions de recrutement le mieux apte à satisfaire vos besoins et exigences d’embauche, qui communiquera avec vous pour lancer le processus.</p></legend>
+			<br>
+						<br><br><div class="thanks">Vos infos ont été transmises avec succès.  Le membre du personnel concerné vous contactera sous peu.</div>		</fieldset>
+	</form>
+</div>
+{% endblock %}

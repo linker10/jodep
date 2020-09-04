@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'chalk';
+    src: url('fonts/Chalkduster.eot');
+    src: url('fonts/Chalkdusterd41d.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Chalkduster.svg#chalk') format('svg'),
+         url('fonts/Chalkduster.woff') format('woff'),
+         url('fonts/Chalkduster.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/sourcesanspro-light-webfont.eot');
+    src: url('fonts/sourcesanspro-light-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-light-webfont.svg#sourceSP') format('svg'),
+         url('fonts/sourcesanspro-light-webfont.woff') format('woff'),
+         url('fonts/sourcesanspro-light-webfont.ttf') format('truetype');
+    font-weight:300;
+    font-style:normal;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/sourcesanspro-lightitalic-webfont.eot');
+    src: url('fonts/sourcesanspro-lightitalic-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-lightitalic-webfont.svg#sourceSPitalic') format('svg'),
+         url('fonts/sourcesanspro-lightitalic-webfont.woff') format('woff'),
+         url('fonts/sourcesanspro-lightitalic-webfont.ttf') format('truetype');
+    font-weight:300;
+    font-style:italic;
+}

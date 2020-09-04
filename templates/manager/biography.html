@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="MainContent" style=""> 
+
+      
+
+  <script type="text/javascript" src="{% static 'script/biography.js' %}"></script>
+
+  <center>
+    <table class="DefaultTable">
+      <tr>
+        <td class="DefaultBottom">          
+          <div class="fontcolor" style="text-align: left">
+            <div class="quartermargin">
+              <table style="width: 740px" cellpadding="1" cellspacing="1">
+                <tr>
+                  <td style="width: 365px; background-color: #d0dde7">
+                    <span id="ctl00_Main_ResumeTitle" class="MainContentTitle" style="font-weight:bold;">CV</span>
+                  </td>
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 365px; background-color: #d0dde7">
+                    <span id="ctl00_Main_LetterTitle" class="MainContentTitle" style="font-weight:bold;">Lettre de motivation</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; vertical-align: middle">
+                    
+                  </td>
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 365px; vertical-align: middle">
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px">
+                    <span id="ctl00_Main_ResumeText" class="AllText">Pour sauvegarder un nouveau CV &agrave; votre profil, vous pouvez:</span>
+                  </td>
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 365px">
+                    <span id="ctl00_Main_CoverText" class="AllText">Pour sauvegarder une nouvelle lettre de motivation &agrave; votre profil, vous pouvez:</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; vertical-align: top;">
+                    <div style="margin-left: 10px">
+                      <div id="ctl00_Main_BuilderResumeLinkActive">
+                        <input value="BuilderResumeRadioLink" name="ctl00$Main$Resume" type="radio" id="ctl00_Main_BuilderResumeRadioLink" onclick="javascript:resumebuilder();" class="AllText" tabindex="0" /><a href="{% url 'manager:architect' %}"><span id="ctl00_Main_BuilderResumeLink" class="AllLinks">Cr&eacute;er votre CV Quantum, &agrave; l&#39;aide de notre Profileur Quantum</span></a>
+                      </div>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 10px;">
+                      <div id="ctl00_Main_BuilderResumeLinkActive">
+                        <input value="BuilderResumeRadioLink" name="ctl00$Main$Resume" type="radio" id="ctl00_Main_BuilderResumeRadioLink" onclick="javascript:resumebuilder();" class="AllText" tabindex="0" /><span id="ctl00_Main_BuilderResumeLink" class="AllLinks">Télécharger un nouveau fichier Télécharger votre CV en format PDF.</span>
+                        {% if form2.errors %}
+                          {{ form2.errors }}
+                        {% endif %}
+                        <form method="post" enctype="multipart/form-data" action="file_upload/">
+                          {% csrf_token %}
+                          {{ form2.as_p }}
+                          <button type="submit">Upload</button>
+                        </form>
+                      
+                        {% if uploaded_file_url %}
+                          <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+                        {% endif %}
+                      
+                      </div>
+                    </div>
+                  </td>
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 365px">
+                    <div style="margin-left: 10px">
+                      <input value="BuilderLetterRadio" name="ctl00$Main$Letter" type="radio" id="ctl00_Main_BuilderLetterRadio" onclick="javascript:letterbuilder();" class="AllText" tabindex="0" /><span id="ctl00_Main_MemoLetterText" class="AllText">Cr&eacute;er un nouvelle lettre de motivation</span>
+        
+                      <div id="BuilderLetter" class="AllText">
+                        <table>
+                          <tr>
+                            <td>
+                            <form method="POST" action="."> {% csrf_token %} <!-- COVER LETTER -->
+                              <textarea name="cover_letter" rows="2" cols="20" id="ctl00_Main_BuilderLetterTextBox" class="AllText" style="height:100px;width:320px;"></textarea>
+                              <input type="submit" value="SAUVEGARDER LA NOUVELLE LETTRE" style="height:30px;width:275px;" />
+                            </form>
+                            {% if saved %}
+                                <small style="color: red;">la lettre de motivation a été enregistrée avec succès.</small> 
+                            {% endif %}
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px" align="center">
+                  </td>
+                </tr>
+        
+                <tr>
+                  <td style="width: 365px; height: 10px" align="center">
+                    
+                  </td>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px" align="center">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; height: 10px">
+                    <span id="ctl00_Main_ResumeNote" class="AllText">[Note: Sauvegarder un nouveau CV &eacute;crasera le courant]</span>
+                  </td>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px">
+                    <span id="ctl00_Main_LetterNote" class="AllText">[Note: Sauvegarder une nouvelle lettre de motivation &eacute;crasera celle courante]</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                  <td style="width: 10px; height: 10px">
+                  </td>
+                  <td style="width: 365px; height: 10px">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 365px" align="center">
+                    <table border="0" width="200px" cellpadding="0" style="height: 140px; border-collapse: collapse">
+                      <tr>
+                        <td colspan="2" rowspan="2" class="CornerUpperLeft">
+                        </td>
+                        <td class="PatternHorizontal">
+                        </td>
+                        <td colspan="2" rowspan="2" class="CornerUpperRight">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="height: 5px">
+                        </td>
+                      </tr>
+                      <tr style="height: 140px">
+                        <td class="PatternVertical">
+                        </td>
+                        <td style="width: 5px">
+                        </td>
+                        <td>
+                          <div style="text-align: left">
+                            <img alt="" src="{% static 'images/arrow_headers_alone.gif' %}" />&nbsp;&nbsp; <span id="ctl00_Main_ResumeHelpfulTip" class="MainContentTitle">Conseil</span><br />
+                            <span id="ctl00_Main_ResumeHelpfulTipText" class="AllText">Attirez leur attention! Dites aux employeurs imm&#39;diatement ce qu&#39;ils veulent savoir sur vous. Le <b>premier tiers</b> de la page num&eacute;ro un est la partie la plus importante de votre C.V.</span></div>
+                        </td>
+                        <td style="width: 5px">
+                        </td>
+                        <td class="PatternVertical">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" rowspan="2" class="CornerBottomLeft">
+                        </td>
+                        <td style="height: 5px">
+                        </td>
+                        <td colspan="2" rowspan="2" class="CornerBottomRight">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="PatternHorizontal" style="height: 3px">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 365px" align="center">
+                    <table border="0" width="200px" cellpadding="0" style="height: 140px; border-collapse: collapse">
+                      <tr>
+                        <td colspan="2" rowspan="2" class="CornerUpperLeft">
+                        </td>
+                        <td class="PatternHorizontal">
+                        </td>
+                        <td colspan="2" rowspan="2" class="CornerUpperRight">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="height: 5px">
+                        </td>
+                      </tr>
+                      <tr style="height: 140px">
+                        <td class="PatternVertical">
+                        </td>
+                        <td style="width: 5px">
+                        </td>
+                        <td>
+                          <div style="text-align: left">
+                            <img alt="" src="{% static 'images/arrow_headers_alone.gif' %}" />&nbsp;&nbsp; <span id="ctl00_Main_LetterHelpfulTip" class="MainContentTitle">Conseil</span><br />
+                            <div style="text-align: left">
+                              <span id="ctl00_Main_LetterHelpfulTipText" class="AllText" style="text-align: left">Attirez leur attention! Dites aux employeurs imm&#39;diatement ce qu&#39;ils veulent savoir sur vous. Le <b>premier tiers</b> de la page num&eacute;ro un est la partie la plus importante de votre C.V.</span></div>
+                        </td>
+                        <td style="width: 5px">
+                        </td>
+                        <td class="PatternVertical">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" rowspan="2" class="CornerBottomLeft">
+                        </td>
+                        <td style="height: 5px">
+                        </td>
+                        <td colspan="2" rowspan="2" class="CornerBottomRight">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="PatternHorizontal" style="height: 3px">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div style="height: 200px">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </center>
+
+
+                
+  </div>
+  
+<script language='javascript' type='text/javascript'>
+<!-- hide from non-javascript browsers
+var radioresume = getElementByPartialName('BrowseResumeRadio', 'input');
+radioresume.checked = true;
+var browseresume = getElementByPartialName('ResumeBrowser', 'input');
+browseresume.disabled = false;
+var builderresumelink = getElementByPartialName('BuilderResumeLinkActive', 'div');
+builderresumelink.style.display = 'none';
+var radioletter = getElementByPartialName('BrowseLetterRadio', 'input');
+radioletter.checked = true;
+var browseletter = getElementByPartialName('LetterBrowser', 'input');
+browseletter.disabled = false;
+var builderletter = getElementByPartialName('BuilderLetterTextBox', 'textarea');
+builderletter.disabled = true;
+//-->
+</script>
+
+
+{% endblock %}

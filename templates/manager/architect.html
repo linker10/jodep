@@ -1,0 +1,499 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <script type="text/javascript" src="{% static '/script/santacruz.js' %}"></script>
+  <div class="MainContent" style=""> 
+  
+      
+
+  <div id="ctl00_Main_UpdatePanel">
+	
+      <center>
+        <table class="DefaultTable">
+          <tr>
+            <td class="DefaultBottom">
+              <br />
+              <br />
+              <div class="fontcolor" style="text-align: left">
+                <div class="margin">
+                  <table style="width: 700px">
+                    <tr style="background-color: #d0dde7">
+                      <td colspan="5">
+                        <span id="ctl00_Main_CreateProfile" class="MainContentTitle">Cr&eacute;er votre CV Quantum, &agrave; l&#39;aide de notre Profileur Quantum</span>
+                      </td>
+                    </tr>
+                    <tr style="height: 10px">
+                      <td colspan="5" align="right">
+                        <a id="ctl00_Main_ReturnTopButton" class="AllLinks" href="javascript:__doPostBack(&#39;ctl00$Main$ReturnTopButton&#39;,&#39;&#39;)">Retourner &agrave; mon CV</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="ctl00_Main_ProfileWelcome" class="AllText" colspan="5">Bienvenue &aacute; la section Cr&eacute;er un profil de notre site web. En suivant ces &Eacute;TAPES SIMPLES, vous pouvez cr&eacute;er votre propre profil de candidat, en quelques minutes. C&#39;est facile et rapide!</td>
+	
+                    </tr>
+                    <tr style="height: 10px">
+                      <td colspan="5" style="height: 5px">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="ctl00_Main_PleaseSelect" colspan="5" class="AllText">Veuillez choisir la cat&eacute;gorie d&#39;emploi pour laquelle vous d&eacute;sirez cr&eacute;er votre profil</td>
+	
+                    </tr>
+                    <tr style="height: 10px">
+                      <td style="height: 10px" colspan="5">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" style="height: 10px">
+                        <input value="IndustrialRadio" name="ctl00$Main$Skill" type="radio" id="ctl00_Main_IndustrialRadio" onclick="hideAdministrative();" /><span id="ctl00_Main_IndustrialPositions" class="AllTextBold">Postes industriels</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" style="height: 10px">
+                        <input value="AdministrativeRadio" name="ctl00$Main$Skill" type="radio" id="ctl00_Main_AdministrativeRadio" onclick="hideIndustrial();" tabindex="0" /><span id="ctl00_Main_AdministrativePositions" class="AllTextBold">Postes administratifs/de bureau</span>
+                      </td>
+                    </tr>
+                  </table>
+                  </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </center>
+      <center>
+        <table>
+        <tr valign="top">
+            <td colspan="5">
+              <div id="Industrial">
+                <table style="width: 700px" cellpadding="2" cellspacing="0">
+                  <tr style="height: 10px">
+                    <td colspan="5" style="height: 10px">
+                    </td>
+                  </tr>
+                  <tr style="background-color: #d0dde7">
+                    <td id="ctl00_Main_TechnicalIndustrial" colspan="5" class="MainContentSubTitleRed">Comp&eacute;tences techniques (poste industriel)</td>
+        
+                  </tr>
+                  <tr>
+                    <td id="ctl00_Main_Equipment" style="width: 340px" class="AllTextBold">&Eacute;quipement</td>
+        
+                    <td style="width: 5px">
+                    </td>
+                    <td id="ctl00_Main_Certificate" style="width: 140px" class="AllTextBold" align="center">Certificat ou licence</td>
+        
+                    <td style="width: 5px">
+                    </td>
+                    <td id="ctl00_Main_YearsExperience" style="width: 200px" class="AllTextBold" align="center">Nombre d&#39;ann&eacute;es d&#39;exp&eacute;rience</td>
+        
+                  </tr>
+                  <tr>
+                    <td id="ctl00_Main_EquipmentText" valign="top" style="width: 340px" class="AllText">Faites une liste de tout &eacute;quipement que vous avez d&eacute;j&agrave; utilis&eacute;, ainsi que toute exp&eacute;rience de production, assemblage ou distribution (par ex. chariot &eacute;l&eacute;vateur, soudage, emballage, chargement, r&eacute;ception, exp&eacute;dition, etc.)</td>
+        
+                    <td style="width: 5px">
+                    </td>
+                    <td id="ctl00_Main_CertificateText" valign="top" style="width: 140px" class="AllText">(Veuillez cocher la case ci&#8211;dessous, si vous d&eacute;tenez un certificat ou une licence valide)</td>
+        
+                    <td style="width: 5px">
+                    </td>
+                    <td id="ctl00_Main_YearsExperienceText" valign="top" style="width: 200px" class="AllText">(Veuillez pr&eacute;ciser le nombre d&#39;ann&eacute;es d&#39;exp&eacute;riencepratique de travail que vous avez avec cet &eacute;quipement</td>
+        
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$EquipmentTextBox_A" type="text" id="ctl00_Main_EquipmentTextBox_A" tabindex="1" class="AllText" style="width:330px;" />
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 140px" align="center">
+                      <span class="AllText"><input id="ctl00_Main_EquipmentCheckBox_A" type="checkbox" name="ctl00$Main$EquipmentCheckBox_A" tabindex="2" /></span>
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 200px" align="center">
+                      <input name="ctl00$Main$YearsTextBox_A" type="text" id="ctl00_Main_YearsTextBox_A" tabindex="3" class="AllText" style="width:50px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$EquipmentTextBox_B" type="text" id="ctl00_Main_EquipmentTextBox_B" tabindex="4" class="AllText" style="width:330px;" />
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 140px" align="center">
+                      <span class="AllText"><input id="ctl00_Main_EquipmentCheckBox_B" type="checkbox" name="ctl00$Main$EquipmentCheckBox_B" tabindex="5" /></span>
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 200px" align="center">
+                      <input name="ctl00$Main$YearsTextBox_B" type="text" id="ctl00_Main_YearsTextBox_B" tabindex="6" class="AllText" style="width:50px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$EquipmentTextBox_C" type="text" id="ctl00_Main_EquipmentTextBox_C" tabindex="7" class="AllText" style="width:330px;" />
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 140px" align="center">
+                      <span class="AllText"><input id="ctl00_Main_EquipmentCheckBox_C" type="checkbox" name="ctl00$Main$EquipmentCheckBox_C" tabindex="8" /></span>
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 200px" align="center">
+                      <input name="ctl00$Main$YearsTextBox_C" type="text" id="ctl00_Main_YearsTextBox_C" tabindex="9" class="AllText" style="width:50px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$EquipmentTextBox_D" type="text" id="ctl00_Main_EquipmentTextBox_D" tabindex="10" class="AllText" style="width:330px;" />
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 140px" align="center">
+                      <span class="AllText"><input id="ctl00_Main_EquipmentCheckBox_D" type="checkbox" name="ctl00$Main$EquipmentCheckBox_D" tabindex="11" /></span>
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 200px" align="center">
+                      <input name="ctl00$Main$YearsTextBox_D" type="text" id="ctl00_Main_YearsTextBox_D" tabindex="12" class="AllText" style="width:50px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$EquipmentTextBox_E" type="text" id="ctl00_Main_EquipmentTextBox_E" tabindex="13" class="AllText" style="width:330px;" />
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 140px" align="center">
+                      <span class="AllText"><input id="ctl00_Main_EquipmentCheckBox_E" type="checkbox" name="ctl00$Main$EquipmentCheckBox_E" tabindex="14" /></span>
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 200px" align="center">
+                      <input name="ctl00$Main$YearsTextBox_E" type="text" id="ctl00_Main_YearsTextBox_E" tabindex="15" class="AllText" style="width:50px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$EquipmentTextBox_F" type="text" id="ctl00_Main_EquipmentTextBox_F" tabindex="16" class="AllText" style="width:330px;" />
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 140px" align="center">
+                      <span class="AllText"><input id="ctl00_Main_EquipmentCheckBox_F" type="checkbox" name="ctl00$Main$EquipmentCheckBox_F" tabindex="17" /></span>
+                    </td>
+                    <td style="width: 5px">
+                    </td>
+                    <td style="width: 200px" align="center">
+                      <input name="ctl00$Main$YearsTextBox_F" type="text" id="ctl00_Main_YearsTextBox_F" tabindex="18" class="AllText" style="width:50px;" />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td colspan="5">
+              <div id="Administrative">
+                <table style="width: 700px" cellpadding="2" cellspacing="0">
+                  <tr style="height: 10px">
+                    <td colspan="5">
+                    </td>
+                  </tr>
+                  <tr style="background-color: #d0dde7">
+                    <td id="ctl00_Main_TechnicalAdministrative" colspan="3" class="MainContentSubTitleRed">Comp&eacute;tences techniques (poste administratif)</td>
+        
+                  </tr>
+                  <tr>
+                    <td id="ctl00_Main_OfficeSkills" style="width: 340px" class="AllTextBold">Comp&eacute;tences de bureau</td>
+        
+                    <td style="width: 10px">
+                    </td>
+                    <td id="ctl00_Main_ComputerSkills" style="width: 340px" class="AllTextBold">Comp&eacute;tences informatiques</td>
+        
+                  </tr>
+                  <tr>
+                    <td id="ctl00_Main_OfficeSkillsText" valign="top" style="width: 340px" class="AllText">Faites une liste de vos comp&eacute;tences en bureautique/service client/comptabilit&eacute; (par ex. saisie de donn&eacute;es, centre d&#39;appels, r&eacute;ception, et autres.)</td>
+        
+                    <td style="width: 10px">
+                    </td>
+                    <td id="ctl00_Main_ComputerSkillsText" valign="top" style="width: 340px" class="AllText">Faites une liste de vos comp&eacute;tences informatiques (par ex. Excel, Word, PowerPoint, ACCPAC, etc.)</td>
+        
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$OfficeSkillsTextBox_A" type="text" id="ctl00_Main_OfficeSkillsTextBox_A" tabindex="19" class="AllText" style="width:335px;" />
+                    </td>
+                    <td style="width: 10px">
+                    </td>
+                    <td style="width: 340px" align="center">
+                      <input name="ctl00$Main$ComputerSkillsTextBox_A" type="text" id="ctl00_Main_ComputerSkillsTextBox_A" tabindex="25" class="AllText" style="width:335px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$OfficeSkillsTextBox_B" type="text" id="ctl00_Main_OfficeSkillsTextBox_B" tabindex="20" class="AllText" style="width:335px;" />
+                    </td>
+                    <td style="width: 10px">
+                    </td>
+                    <td style="width: 340px" align="center">
+                      <input name="ctl00$Main$ComputerSkillsTextBox_B" type="text" id="ctl00_Main_ComputerSkillsTextBox_B" tabindex="26" class="AllText" style="width:335px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$OfficeSkillsTextBox_C" type="text" id="ctl00_Main_OfficeSkillsTextBox_C" tabindex="21" class="AllText" style="width:335px;" />
+                    </td>
+                    <td style="width: 10px">
+                    </td>
+                    <td style="width: 340px" align="center">
+                      <input name="ctl00$Main$ComputerSkillsTextBox_C" type="text" id="ctl00_Main_ComputerSkillsTextBox_C" tabindex="27" class="AllText" style="width:335px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$OfficeSkillsTextBox_D" type="text" id="ctl00_Main_OfficeSkillsTextBox_D" tabindex="22" class="AllText" style="width:335px;" />
+                    </td>
+                    <td style="width: 10px">
+                    </td>
+                    <td style="width: 340px" align="center">
+                      <input name="ctl00$Main$ComputerSkillsTextBox_D" type="text" id="ctl00_Main_ComputerSkillsTextBox_D" tabindex="28" class="AllText" style="width:335px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$OfficeSkillsTextBox_E" type="text" id="ctl00_Main_OfficeSkillsTextBox_E" tabindex="23" class="AllText" style="width:335px;" />
+                    </td>
+                    <td style="width: 10px">
+                    </td>
+                    <td style="width: 340px" align="center">
+                      <input name="ctl00$Main$ComputerSkillsTextBox_E" type="text" id="ctl00_Main_ComputerSkillsTextBox_E" tabindex="29" class="AllText" style="width:335px;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 340px">
+                      <input name="ctl00$Main$OfficeSkillsTextBox_F" type="text" id="ctl00_Main_OfficeSkillsTextBox_F" tabindex="24" class="AllText" style="width:335px;" />
+                    </td>
+                    <td style="width: 10px">
+                    </td>
+                    <td style="width: 340px" align="center">
+                      <input name="ctl00$Main$ComputerSkillsTextBox_F" type="text" id="ctl00_Main_ComputerSkillsTextBox_F" tabindex="30" class="AllText" style="width:335px;" />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <table style="width: 700px" cellpadding="2" cellspacing="0">
+                <tr style="height: 10px">
+                  <td colspan="5">
+                  </td>
+                </tr>
+                <tr style="background-color: #d0dde7">
+                  <td id="ctl00_Main_Education" colspan="3" class="MainContentSubTitleRed">&Eacute;tudes (Veuillez pr&eacute;ciser le niveau de scolarit&eacute; que vous avez termin&eacute;)</td>
+        
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_HighSchool" class="AllText" style="width: 150px">Secondaire</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 540px">
+                    <span class="AllText"><label for="ctl00_Main_HighSchoolCheckBox">Termin&eacute;/Dipl&ocirc;me obtenu</label><input id="ctl00_Main_HighSchoolCheckBox" type="checkbox" name="ctl00$Main$HighSchoolCheckBox" tabindex="31" /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_College" class="AllText" style="width: 150px">Dipl&ocirc;me d&#39;&eacute;tudes coll&eacute;giales</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 540px">
+                    <span class="AllText"><label for="ctl00_Main_CollegeCheckBox">Termin&eacute;/Dipl&ocirc;me obtenu</label><input id="ctl00_Main_CollegeCheckBox" type="checkbox" name="ctl00$Main$CollegeCheckBox" tabindex="32" /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_University" class="AllText" style="width: 150px">Dipl&ocirc;me universitaire</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 540px">
+                    <span class="AllText"><label for="ctl00_Main_UniversityCheckBox">Termin&eacute;/Dipl&ocirc;me obtenu</label><input id="ctl00_Main_UniversityCheckBox" type="checkbox" name="ctl00$Main$UniversityCheckBox" tabindex="33" /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_Other" class="AllText" style="width: 150px">Autre</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 540px">
+                    <span class="AllText"><label for="ctl00_Main_OtherCheckBox">Termin&eacute;/Dipl&ocirc;me obtenu</label><input id="ctl00_Main_OtherCheckBox" type="checkbox" name="ctl00$Main$OtherCheckBox" tabindex="34" /></span>&nbsp;&nbsp;&nbsp;<span id="ctl00_Main_PleaseSpecify" class="AllText">Veuillez pr&eacute;ciser</span>&nbsp;&nbsp;<input name="ctl00$Main$OtherTextBox" type="text" id="ctl00_Main_OtherTextBox" tabindex="35" class="AllText" style="width:340px;" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <table style="width: 700px" cellpadding="2" cellspacing="0">
+                <tr style="height: 10px">
+                  <td colspan="7">
+                  </td>
+                </tr>
+                <tr style="background-color: #d0dde7">
+                  <td id="ctl00_Main_WorkHistory" colspan="7" class="MainContentSubTitleRed">Historique d&#39;emploi (veuillez entrer seulement votre exp&eacute;rience professionnelle la plus r&eacute;cente ou la plus pertinente.</td>
+        
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_StartDate_A" class="AllText" style="width: 150px">Date d&#39;entr&eacute;e en fonction (mois/ann&eacute;e)</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 165px">
+                    <input name="ctl00$Main$StartDateTextBox_A" type="text" id="ctl00_Main_StartDateTextBox_A" tabindex="36" class="AllText" style="width:165px;" />
+                  </td>
+                  <td style="width: 10px">
+                  </td>
+                  <td id="ctl00_Main_EndDate_A" class="AllText" style="width: 150px">Date de fin d&#39;emploi (mois/ann&eacute;e)</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td style="width: 165px">
+                    <input name="ctl00$Main$EndDateTextBox_A" type="text" id="ctl00_Main_EndDateTextBox_A" tabindex="37" class="AllText" style="width:165px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_CompanyName_A" class="AllText" style="width: 150px">Nom de l&#39;entreprise</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$CompanyNameTextBox_A" type="text" id="ctl00_Main_CompanyNameTextBox_A" tabindex="38" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_LocationCity_A" class="AllText" style="width: 150px">Emplacement (Ville)</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$LocationCityTextBox_A" type="text" id="ctl00_Main_LocationCityTextBox_A" tabindex="39" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_Industry_A" class="AllText" style="width: 150px">Secteur d&#39;activit&eacute;</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$IndustryTextBox_A" type="text" id="ctl00_Main_IndustryTextBox_A" tabindex="40" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_PositionHeld_A" class="AllText" style="width: 150px">Poste d&eacute;tenu/Titre</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$PositionHeldTextBox_A" type="text" id="ctl00_Main_PositionHeldTextBox_A" tabindex="41" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_Responsibilities_A" class="AllText" style="width: 150px">Responsabilit&eacute;s<br />(veuillez d&eacute;crire vos responsabilit&eacute;s)</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <textarea name="ctl00$Main$ResponsibilitiesTextBox_A" rows="2" cols="20" id="ctl00_Main_ResponsibilitiesTextBox_A" tabindex="42" class="AllText" style="height:35px;width:540px;">
+        </textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_Reference_A" class="AllText" colspan="7">R&eacute;f&eacute;rence (optionnel)</td>
+        
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_ReferenceName_A" class="AllText" style="width: 150px">Nom d&#39;une personne ressource</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$ReferenceNameTextBox_A" type="text" id="ctl00_Main_ReferenceNameTextBox_A" tabindex="43" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_ReferenceTitle_A" class="AllText" style="width: 150px">Titre</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$ReferenceTitleTextBox_A" type="text" id="ctl00_Main_ReferenceTitleTextBox_A" tabindex="44" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td id="ctl00_Main_ReferenceTelephone_A" class="AllText" style="width: 150px">Num&eacute;ro de t&eacute;l&eacute;phone</td>
+        
+                  <td style="width: 10px">
+                  </td>
+                  <td colspan="5">
+                    <input name="ctl00$Main$ReferenceTelephoneTextBox_A" type="text" id="ctl00_Main_ReferenceTelephoneTextBox_A" tabindex="45" class="AllText" style="width:540px;" />
+                  </td>
+                </tr>
+              </table>
+              <br />
+              
+                <tr>
+                  <td align="center" colspan="7">
+                    <input type="button" name="ctl00$Main$ResumeButton" value="SAUVEGARDER LE NOUVEAU CV" onclick="javascript:__doPostBack(&#39;ctl00$Main$ResumeButton&#39;,&#39;&#39;)" id="ctl00_Main_ResumeButton" tabindex="66" class="AllText" style="height:30px;width:250px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="7">
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="7">
+                    <span id="ctl00_Main_ResumeNote" class="AllText">[Note: Sauvegarder un nouveau CV &eacute;crasera le courant]</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right" colspan="7">
+                    <a id="ctl00_Main_ReturnBottomButton" class="AllLinks" href="javascript:__doPostBack(&#39;ctl00$Main$ReturnBottomButton&#39;,&#39;&#39;)">Retourner &agrave; mon CV</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        </div>
+        </div>
+        <div style="height: 200px">
+        </div>
+        </td>
+        </tr>
+        </table>
+        </center>
+        </center>
+        </div>
+        
+        <script type="text/javascript">
+
+          function hideAdministrative() {
+            document.getElementById('Administrative').style.display = 'none';
+            document.getElementById('Industrial').style.display = 'block';
+          }
+
+          function hideIndustrial() {
+            document.getElementById('Industrial').style.display = 'none';
+            document.getElementById('Administrative').style.display = 'block';
+          }
+        </script>
+        </div>
+  </div>
+    
+</form>
+
+{% endblock %}

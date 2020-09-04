@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	<div class= "row" id="topBanner">
+			<div class="col 12 col-md-7 content mt-3 pt-3">
+				<h1 class="col-6 d-none d-xl-block"> EMBAUCHER</h1>
+				<p class="d-none d-xl-block">Qu&#39;il s&#39;agisse de cibler un professionnel d&#39;exception pour un poste strat&eacute;gique, de mobiliser des centaines de candidats fiables &agrave; courte &eacute;ch&eacute;ance, ou de fournir des solutions compl&egrave;tes d&#39;impartition, nous sommes reconnus pour notre aptitude et notre d&eacute;termination &agrave; r&eacute;aliser l&#39;impossible.</p>		
+				<a class="btn btn-primary btn-lg btn-block mt-5" role="button" href="{% url 'home:personal' %}">PARLEZ À UN EXPERT</a>
+		</div>
+	</div>
+
+
+<div class= "row mt-3">
+	<div class="col">
+		<div id="specialties">
+			<div class="content">
+				<h2 class="d-none d-md-block">NOS SP&Eacute;CIALIT&Eacute;S</h2>
+				<div class="content col col-md-7">
+					<div class="row justify-content-around">
+							<p class="d-none d-md-flex">Quantum pr&eacute;sente&nbsp;aux employeurs la cr&egrave;me des ressources temporaires, permanentes et contractuelles, dans six cr&eacute;neaux bien distincts. Peu importe ce que vous cherchez - que ce soit un ouvrier d&#39;entrep&ocirc;t fiable, un g&eacute;nie du marketing, un expert programmeur ou un CFO chevronn&eacute; -&nbsp;nos sp&eacute;cialistes vous aideront &agrave; trouver la personne id&eacute;ale. Il vous faut une &eacute;quipe compl&egrave;te? Aucun probl&egrave;me. Nous pouvons g&eacute;rer cela aussi. Et&nbsp;nous nous assurerons que les candidats ont non seulement les comp&eacute;tences que vous exigez, mais aussi les &eacute;l&eacute;ments moins tangibles d&#39;attitude et de personnalit&eacute; qui seront garants de leur succ&egrave;s au sein de votre entreprise.</p>							
+						<div class="col col-xl-4">
+							<div id="specialty41" class="specialty " onmouseDown="toggleIt('specialty41', 'HL');">
+								<img class="img" src="{% static 'images/specialty_41.jpg' %}" alt="">
+								<h3>Administration et exploitation</h3>
+								<div class="desc"><div class="PAD">
+									<p>Le soutien administratif/op&eacute;rationnel est le fondement sur lequel reposent toutes les entreprises solides. Nous repr&eacute;sentons des professionnels productifs, motiv&eacute;s et comp&eacute;tents &agrave; tous les niveaux d&rsquo;expertise, dans un large &eacute;ventail de domaines.</p>						<div class="ital"><p>Aide administrative et de direction | Ressources humaines | Formation | Vente et d&eacute;veloppement commercial | Marketing et communication | Achats | Gestion de la cha&icirc;ne d&#39;approvisionnement | Logistique | Gestion</p></div>
+								</div></div>
+							</div>
+						</div>
+						<div class="col col-xl-4">
+							<div id="specialty42" class="specialty mid" onmouseDown="toggleIt('specialty42', 'HL');">
+								<img class="img" src="{% static 'images/specialty_42.jpg' %}" alt="">
+								<h3>Technologie<br>de l&#39;information</h3>
+								<div class="desc"><div class="PAD">
+									<p>La dotation en personnel de TI est &agrave; l&#39;origine de Quantum, et demeure au c&oelig;ur de nos activit&eacute;s. Recrutement technologique Quantum (RTQ) pr&eacute;sente aux employeurs certains des sp&eacute;cialistes les plus recherch&eacute;s sur le march&eacute;.</p>						<div class="ital"><p>Infrastruture et r&eacute;seautique | S&eacute;curit&eacute; et GRC (gouvernance, gestion des risque et conformit&eacute;) | D&eacute;veloppement de logiciels/d&#39;applications | Gestion de projet et analyse en informatique de gestion | Ing&eacute;nierie | Cadres dirigeants et cadres&nbsp;</p></div>
+								</div></div>
+							</div>
+						</div>
+						<div class="col col-xl-4">
+							<div id="specialty43" class="specialty " onmouseDown="toggleIt('specialty43', 'HL');">
+							<img class="img" src="{% static 'images/specialty_43.jpg' %}" alt="">
+							<h3>Finance et<br>comptabilit&eacute;</h3>
+							<div class="desc"><div class="PAD">
+								<p>Les sp&eacute;cialistes de notre Division comptabilit&eacute; et finance incluent des comptables agr&eacute;&eacute;s et d&rsquo;anciens v&eacute;rificateurs. Misant sur leur expertise, nous sommes en mesure de cibler et d&rsquo;&eacute;valuer les candidats d&rsquo;une mani&egrave;re que les agences g&eacute;n&eacute;ralistes ne peuvent &eacute;galer.</p>						<div class="ital"><p>Commis &agrave; la comptabilit&eacute; |Sp&eacute;cialistes du recouvrement | Gestionnaires de la paie | Contr&ocirc;leurs |Comptables (CA, CIA, CMA, CGA, CPA) | V&eacute;rificateurs | Analystes financiers | Teneurs de livres| Chef des services financiers</p></div>
+							</div></div>
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-around">
+						<div class="col col-xl-4">
+							<div id="specialty44" class="specialty " onmouseDown="toggleIt('specialty44', 'HL');">
+							<img class="img" src="{% static 'images/specialty_44.jpg' %}" alt="">
+							<h3>Service &agrave;<br>la client&egrave;le</h3>
+							<div class="desc"><div class="PAD">
+								<p>Quantum recrute du personnel pour des &eacute;v&eacute;nements d&rsquo;envergure et fournit des &eacute;quipes autonomes pour certains des plus importants centres d&rsquo;appels au Canada.</p>						<div class="ital"><p>Centre d&rsquo;appels entrants et sortants &#9474; Cr&eacute;dit / Recouvrement / Facturation&#9474; Relation client / Fid&eacute;lisation de la client&egrave;le &#9474; Direction d&rsquo;&eacute;quipe / Supervision&#9474; T&eacute;l&eacute;marketing &#9474; Organisation d&rsquo;&eacute;v&eacute;nements &#9474; Caisse &#9474; Vente et d&eacute;tail &#9474; Publicit&eacute; de rue &#9474;Gestion</p></div>
+							</div></div>
+							</div>
+						</div>
+						<div class="col col-xl-4">
+							<div id="specialty45" class="specialty mid" onmouseDown="toggleIt('specialty45', 'HL');">
+							<img class="img" src="{% static 'images/specialty_45.jpg' %}" alt="">
+							<h3>M&eacute;tiers et<br>industrie</h3>
+							<div class="desc"><div class="PAD">
+								<p>Une main-d&rsquo;&oelig;uvre sur qui l&rsquo;on peut compter est le moteur qui fait tourner la cha&icirc;ne d&rsquo;approvisionnement. Des ouvriers g&eacute;n&eacute;raux aux travailleurs sp&eacute;cialis&eacute;s, nos experts peuvent mobiliser des ressources lorsque vous en avez besoin.</p>						<div class="ital"><p>Main-d&rsquo;&oelig;uvre g&eacute;n&eacute;rale &#9474; Commis &agrave; la cha&icirc;ne de production &#9474;Op&eacute;rateurs de machine &#9474; Caristes &#9474;Commis aux commandes &#9474;Ouvriers sp&eacute;cialis&eacute;s &#9474; Pr&eacute;pos&eacute;s aux services d&rsquo;alimentation &#9474;Gestionnaires</p></div>
+							</div></div>
+							</div>
+						</div>
+						<div class="col col-xl-4">
+							<div id="specialty46" class="specialty " onmouseDown="toggleIt('specialty46', 'HL');">
+							<img class="img" src="{% static 'images/specialty_46.jpg' %}" alt="">
+							<h3><br>Soins de sant&eacute;</h3>
+							<div class="desc"><div class="PAD">
+								<p><a href="http://www.alternacare.ca/">Alternacare</a>, notre filiale de soins de sant&eacute;, pr&eacute;sente des professionnels qualifi&eacute;s et empathiques. Que ce soit dans les h&ocirc;pitaux, les maisons de retraite ou chez des particuliers, nous mettons l&rsquo;accent sur le facteur humain des soins de sant&eacute;.</p>						<div class="ital"><p>Infirmiers et infirmi&egrave;res &#9474; Infirmiers et infirmi&egrave;res auxiliaires &#9474; Pr&eacute;pos&eacute;s aux services de soutien &agrave; la personne &#9474; Gardes &#9474; Accompagnateurs &#9474; Aides &agrave; domicile &#9474; Sp&eacute;cialistes en soins des pieds &#9474; Personnel de soutien &#9474; Gestionnaires</p></div>
+							</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+</div> 
+
+<div class= "row mt-3">
+	<div class="col">
+		<div id="solutions" class="">
+			<div class="content col col-md-7">
+				<h2 class="d-none d-lg-block">SOLUTIONS</h2>
+				<div class="content">
+					<p class="d-none d-lg-block">Depuis nos d&eacute;buts en dotation de personnel, nous avons toujours poursuivi notre &eacute;volution sans jamais perdre de vue notre mission d&#39;aider nos clients &agrave; r&eacute;aliser leurs objectifs de croissance. Pour relever tous vos d&eacute;fis en mati&egrave;re de recrutement, nous proposons une gamme compl&egrave;te de services d&#39;acquisition de talent et de solutions d&#39;affaires.</p><p class="d-none d-lg-block">Cette combinaison strat&eacute;gique de services comprend les &eacute;l&eacute;ments suivants :</p>
+					<div class="row justify-content-around">						
+						<div id="solution47" class="solutionB " onmouseDown="toggleIt('solution47', 'HL');">
+							<img src="{% static 'images/solution_47.jpg' %}" alt="">
+							<h3><span>Dotation en personnel<br>temporaire/contractuel</span></h3>
+							<div class="desc"><div class="PAD">
+								<p>Que vous ayez besoin d&rsquo;un entrepreneur de TI pour un projet sp&eacute;cial, d&rsquo;une personne pour couvrir la r&eacute;ception pendant une journ&eacute;e, ou d&rsquo;une &eacute;quipe de production de centaines d&rsquo;ouvriers temporaires, Quantum a les outils et les ressources qu&rsquo;il faut pour r&eacute;agir <em>au plus vite</em>.</p>					</div></div>
+						</div>
+						<div id="solution48" class="solutionB mid" onmouseDown="toggleIt('solution48', 'HL');">
+							<img src="{% static 'images/solution_48.jpg' %}" alt="">
+							<h3><span>Placement<br>permanent</span></h3>
+							<div class="desc"><div class="PAD">
+								<p>Toujours en qu&ecirc;te de la perle rare pour compl&eacute;ter votre &eacute;quipe &agrave; long terme? Les m&eacute;thodes de s&eacute;lection approfondies de Quantum augmenteront vos chances de d&eacute;pister la bonne personne pour le r&ocirc;le, votre &eacute;quipe et votre environnement, et la mieux apte &agrave; s&rsquo;impliquer et mettre la main &agrave; la p&acirc;te.</p>					</div></div>
+						</div>
+						<div id="solution49" class="solutionB " onmouseDown="toggleIt('solution49', 'HL');">
+							<img src="{% static 'images/solution_49.jpg' %}" alt="">
+							<h3><span>Traitement de la masse salariale</span></h3>
+							<div class="desc"><div class="PAD">
+								<p>Abordables, flexibles et complets, les services de traitement de la paye de Quantum peuvent vous soulager du fardeau administratif li&eacute; &agrave; la gestion de la masse salariale, quelle qu&rsquo;en soit la taille &ndash; qu&rsquo;il s&rsquo;agisse d&rsquo;un seul entrepreneur ou de milliers d&rsquo;employ&eacute;s temporaires.</p>					</div></div>
+						</div>
+					</div>
+					<div class="row justify-content-around">
+						<div class="row justify-content-around">						
+							<div id="solution50" class="solutionB " onmouseDown="toggleIt('solution50', 'HL');">
+							<img src="{% static 'images/solution_50.jpg' %}" alt="">
+							<h3><span>Gestion de projet<br>sur les lieux </span></h3>
+							<div class="desc"><div class="PAD">
+								<p>Post&eacute;s dans vos propres installations, nos sp&eacute;cialistes en recrutement transportent notre bureau jusqu&rsquo;au v&ocirc;tre &ndash; en se chargeant d&rsquo;une portion de vos activit&eacute;s de dotation en personnel, du processus complet de recrutement, ou de la gestion de bout en bout de votre personnel temporaire en affectation.</p>					</div></div>
+							</div>
+							<div id="solution51" class="solutionB mid" onmouseDown="toggleIt('solution51', 'HL');">
+							<img src="{% static 'images/solution_51.jpg' %}" alt="">
+							<h3><span>Soutien des RH</span></h3>
+							<div class="desc"><div class="PAD">
+								<p>En plus d&rsquo;offrir des services complets de recrutement, nous pouvons soutenir votre propre &eacute;quipe de RH en limitant notre processus aux seules &eacute;tapes dont vous avez besoin &ndash; tri de CV, entretien de pr&eacute;s&eacute;lection, &eacute;valuation des comp&eacute;tences techniques, obtention de r&eacute;f&eacute;rences, v&eacute;rification d&rsquo;ant&eacute;c&eacute;dents, entrevue de d&eacute;part, et plus encore.</p>					</div></div>
+							</div>
+							<div id="solution52" class="solutionB " onmouseDown="toggleIt('solution52', 'HL');">
+							<img src="{% static 'images/solution_52.jpg' %}" alt="">
+							<h3><span>Solutions de<br>comptabilisation<br>des heures</span></h3>
+							<div class="desc"><div class="PAD">
+								<p>Nos solutions d&rsquo;horodatage personnalis&eacute;es et automatis&eacute;es et notre horloge pointeuse en ligne renforcent l&rsquo;efficacit&eacute; de gestion, de contr&ocirc;le, et de rapport des heures du personnel. Quantum fournit des syst&egrave;mes cl&eacute; en main &ndash; y compris le mat&eacute;riel, l&rsquo;installation et la formation.</p>					</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>
+<div class="row mt-2" >
+	<div class="col">
+		<div id="testimonials" class="">
+			<div class="content col col-md-7">
+				<h2>TÉMOIGNAGES</h2>
+				<div class="row justify-content-center" id="testimonialsCon">
+					<div class="col mx-2">
+						<div id="testimonial110" class="testimonial ">
+							<div class="desc"><p><em>&laquo;&thinsp;Nous avons recours aux services de Quantum dans diff&eacute;rentes villes, et je me fais le porte-parole de plusieurs membres de la direction lorsque j&rsquo;affirme que les prestations offertes par toutes les succursales ont jou&eacute; un r&ocirc;le absolument d&eacute;terminant dans notre cas, en nous aidant &agrave; trouver le personnel adapt&eacute; &agrave; nos besoins.&raquo;</em><br /><br />Directeur des services pour un chef de file mondial des solutions de visioconf&eacute;rence</p></div>
+						</div>
+					</div>
+					<div class="col mx-2">
+						<div id="testimonial109" class="testimonial">
+							<div class="desc"><p><em>&laquo;&thinsp;Son approche et son personnel. C&rsquo;est &ccedil;a la formule gagnante qui permet &agrave; Quantum de sans cesse surpasser les attentes pour chaque mandat. &raquo;</em><br /><br />Premier vice-pr&eacute;sident des op&eacute;rations<br />Banque d&#39;investissement</p></div>
+						</div>
+					</div>
+					<div class="col mx-2">
+						<div id="testimonial53" class="testimonial ">
+							<div class="desc"><p><em>&laquo;&thinsp;Pour nous, l&rsquo;&eacute;quipe Quantum est vraiment &agrave; l&rsquo;&eacute;coute de nos besoins. Peu importe les demandes, elle trouve des solutions pour s&rsquo;y adapter et s&rsquo;assure toujours d&rsquo;offrir une qualit&eacute; de service exceptionnelle. Pour nous, Quantum est la solution!&thinsp;&raquo; </em></p><p><br />Directeur logistique,<br />Canada pour un chef de file mondial de l&rsquo;industrie du jeu et du divertissement</p></div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>
+
+<div align="center">
+	<div class="bubblePoint"><a href="temoignages.html"><img class="img-fluid" src="{% static 'images/seemore1.svg' %}"></a></div>
+</div> 
+
+{% endblock %}
