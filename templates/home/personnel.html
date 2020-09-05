@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="content">
+<div class="content" style="width:800px; margin:0 auto;">
 	<legend><strong>Parlez à un expert</strong><br>
 		<br>
 		<p>En quête de personnel? Avec quelques détails seulement, nous pouvons désigner le gestionnaire en solutions de recrutement le mieux apte à satisfaire vos besoins et exigences d’embauche, qui communiquera avec vous pour lancer le processus.</p></legend>
@@ -11,6 +11,7 @@
 	{% if form.errors %}
 		{{ form.errors }}
 	{% endif %}
+
 	<form id="staffForm" name="staffForm" method="post"> {% csrf_token %}
 		<input type="hidden" name="staffFormSub" value="true">
 		<fieldset>
