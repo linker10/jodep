@@ -17,22 +17,22 @@
         {% comment %} <p>Please, use the following form to log-in. If you don't have an account <a href="{% url 'register' %}">register here</a></p> {% endcomment %}
         {% endif %}
         
-        <div class="d-none d-md-block" style="margin-left: 5px;">
+        <div class="d-none d-md-block mb-5" style="margin-left: 5px;">
             <small>de session
                 NOTE: Ce compte est réservé aux employés temporaires actuellement en affectation.<br/> Si vous êtes un chercheur d’emploi, veuillez vous inscrire aux alertes d’emploi ici.
             </small> 
         </div><br/>
         <div style="margin-left: 5px;">
-            <div class="login-form">
+            <div class="login-form mb-2" >
                 <form action="{% url 'login' %}" method="post">
                     {{ form.as_p }}
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ next }}" />
-                    <p><input type="submit" value="Log-in"></p>
+                    <p class="mt-2"><input type="submit" value="Log-in"></p>
                 </form>
             </div>
-            <p><a href="{% url 'password_reset' %}" style="color: white">Nom d'utilisateur et mot de passe oubliés?</a></p>
-            <p><a href="{% url 'register' %}" style="color: white">Inscrivez-vous comme employé en affectation.</a></p>
+            <p class="mt-2"><a href="{% url 'password_reset' %}" style="color: white">Nom d'utilisateur et mot de passe oubliés?</a></p>
+            <p class="mt-2"><a href="{% url 'register' %}" style="color: white">Inscrivez-vous comme employé en affectation.</a></p>
         </div>
         </div>
     </div>

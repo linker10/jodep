@@ -82,10 +82,10 @@ function prevBotPanel(){
 	botTime = Date.now() + botFrequency;
 }
 function showVideo(lang){
-	cssClassChange('hidden','homeSlide');
-	theDiv = document.getElementById('vidCon');
-	cssClassChange('shown','vidCon');
-	theDiv.innerHTML = '<video autoplay="true" style="object-fit: cover;width:100%;min-height: 100%;"><source src="vid/final' + lang + '.mp4" type="video/mp4"  /></video>';	
+	// cssClassChange('hidden','homeSlide');
+	// theDiv = document.getElementById('vidCon');
+	//$('#vidCon').addClass("shown");
+	// theDiv.innerHTML = '<video autoplay="true" style="object-fit: cover;width:100%;min-height: 100%;"><source src="static/vid/final' + lang + '.mp4" type="video/mp4"  /></video>';	
 }
 function toggleIt(theID, theClass){
 	document.getElementById(theID).classList.toggle(theClass);

@@ -11,12 +11,13 @@
 					<img id="panel1" class="img-fluid" src="{% static 'images/un.png' %}" alt="" usemap="#homeSlide"><map name="homeSlide">
 		<area alt="" coords="19,252,314,416" href="{% url 'home:hire' %}">
 		<area alt="" coords="706,198,1032,357" href="{% url 'home:work' %}">
-		<a href="https://drive.google.com/file/d/1tTpS1iu2q3q_gTcdvlakEEhH6gv3ZlFL/view"> <area alt="" coords="81,465,176,532" href="" onclick="showVideo(1);"></a>
+		<div id="video1"> <area alt="" coords="81,465,176,532" > </div>
 
 		</map>
 
 				</div>
-				<div id="vidCon" class="hidden"></div>
+				<div id="vidCon" class=" hidden mb-5 pb-5 center">
+				<video width="640" height="480" controls><source src="{% static 'vid/final1.mp4' %}" type="video/mp4"  /></video></div>
 			</div>
 		</div>
 	</div>
