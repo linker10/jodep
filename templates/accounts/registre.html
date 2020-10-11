@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block content %}
-<div id="topBanner">
-</div>
+<!--<div id="topBanner">-->
+<!--</div>-->
 <div class="content2">
 	<form id="regForm" name="regForm" method="post" accept-charset="utf-8"> {% csrf_token %}
 		<input type="hidden" name="submitted" value="true">
-		<img src="{% static 'images/register.jpg' %}" alt="">
+		<img src="{% static 'images/register.jpg' %}" style="margin: 16px 40px 10px 122px;" alt="">
 		<fieldset>
 			<legend><strong>Inscrivez–vous chez Le Plaisir de Soigner</strong></legend>
 				{% if form.errors %}

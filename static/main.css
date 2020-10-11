@@ -9,7 +9,7 @@ a img{text-decoration:none;border:0 none;}
 a:hover{opacity:0.7}
 a[name] {display:block;padding-top:110px;margin-top:-110px;z-index:-1;position:relative;}
 
-p{margin:0px 0px 20px 0px;padding:0px;-webkit-text-size-adjust:100%;font-size:inherit;}
+p{margin:-36px 0px 20px 2px;padding:0px;-webkit-text-size-adjust:100%;font-size:inherit;}
 p.flush{margin:0px 0px 5px 0px;}
 
 strong {font-weight: 600}
@@ -36,7 +36,7 @@ body.l1 div#mainMenu a{font:20px 'Source Sans Pro', Arial;font-weight:300;}
 	div#mainMenu a#mm5{border:1px solid #313131;padding:5px 10px 2px 10px;}
 
 div#topBannerSpace{height:89px;}
- div#topBanner{background-size:100% auto; padding-bottom: 30%; background-repeat:no-repeat;background-position:center;height:100%;overflow:hidden;background-image:url(images/banner_blackboard1.jpg);} 
+ div#topBanner{background-size:100% auto; padding-bottom: 30%; background-repeat:no-repeat;background-position:center;height:100%;overflow:hidden;background-image:url(images/banner_blackboard1.jpg);}
  div#topBanner2{background-size:100% auto; padding-bottom: 30%; background-repeat:no-repeat;background-position:center;height:100%;overflow:hidden;background-image:url(images/imagen.png);} 
  div#topBanner3{background-size:100% auto; padding-bottom: 40%; background-repeat:no-repeat;background-position:center;height:100%;overflow:hidden;background-image:url(images/thinking.png);} 
 	body#s1 div#topBanner{background-image:url(images/bkg_about.jpg);height:904px;border-bottom:0px solid #90ae2c;}
@@ -127,7 +127,7 @@ div.homeBox{display:inline-block;vertical-align:top;position:relative;z-index:20
 	div.homeBox#hb2{margin:0px 45px;}
 
 div.content2{font:21px/27px 'Source Sans Pro', Arial;font-weight:300;	margin-left:auto;margin-right:auto;}
-	body > div.content2{padding:60px 0px 40px 0px;}
+	body > div.content2{padding:0px 0px 40px 0px;}
 div.content2 strong {font-weight: 600;}	
 
 img.botArrow{display:inline-block;vertical-align:top;cursor:pointer;}
