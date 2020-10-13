@@ -117,8 +117,9 @@
 						<br>
 					</select>
 					</div>
+					<span class="mt-1 ml-1"> <input type="image" src="{% static 'images/btn_login-arrow.svg' %}" name="workBtn" value="GO" id="loginBtn"></span>
 				</div>
-<input type="image" src="{% static 'images/btn_login-arrow.svg' %}" name="workBtn" value="GO" id="loginBtn">
+
 			</div>
 			<div class="col-12 col-md-4" id="leftsearchbox">
 			<h2>TROUVEZ DES EMPLOYÉS</h2>
@@ -137,8 +138,8 @@
 						<br>
 					</select>
 					</div>
+					<span class="mt-1 ml-1"><a href="{% url 'home:personal' %}"><img src="{% static 'images/btn_login-arrow.svg' %}" name="staffBtn" value="GO" id="loginBtn" style="height: 30px; width: 41px;"></a></span>
 				</div>
-			<a href="{% url 'home:personal' %}"><img src="{% static 'images/btn_login-arrow.svg' %}" name="staffBtn" value="GO" id="loginBtn" style="height: 30px; width: 41px;"></a>
 			</div>
 		</div>
 	</form>
