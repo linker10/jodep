@@ -2,7 +2,9 @@
 
 {% block content %}
 <div>
-    <span>You've been registered correctly</span><br/>
-    <span>Please login  <a href="{% url 'login' %}">here</a>.</span><br/>
+
+        <span>A message has been sent to your inbox containing a link to confirm the e-mail address.</span><br/>
+    <span>If you didn't receive an mail. Click <a href="{% url 'resend_mail' %}">here</a>.</span><br/>
+
 </div>
 {% endblock %}

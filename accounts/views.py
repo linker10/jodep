@@ -22,24 +22,24 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_active = True
+            user.is_active = False
             user.set_password(form.cleaned_data['password'])
             user.save()
             Profile.objects.create(user=user)
             request.session['username'] = user.username
             current_site = get_current_site(request)
-            #mail_subject = 'Please activate your account on {}'.format(current_site.domain)
-            #message = render_to_string('accounts/acc_active_email.html', {
-            #    'user': user,
-            #    'domain': current_site.domain,
-            #    'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-            #    'token': account_activation_token.make_token(user),
-            #})
-            #to_email = form.cleaned_data.get('email')
-            #email = EmailMessage(
-            #            mail_subject, message, to=[to_email]
-            #)
-            #email.send()
+            mail_subject = 'Please activate your account on {}'.format(current_site.domain)
+            message = render_to_string('accounts/acc_active_email.html', {
+                'user': user,
+                'domain': current_site.domain,
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'token': account_activation_token.make_token(user),
+            })
+            to_email = form.cleaned_data.get('email')
+            email = EmailMessage(
+                        mail_subject, message, to=[to_email]
+            )
+            email.send()
             return render(request, 'accounts/confirm_registration.html')
     else:
         form = UserRegistrationForm()
