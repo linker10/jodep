@@ -23,7 +23,7 @@
             </small> 
         </div><br/>
         <div style="margin-left: 5px;">
-            <div class="login-form mb-2" >
+            <div class="mb-2 login-form">
                 <form action="{% url 'login' %}" method="post">
                     {{ form.as_p }}
                     {% csrf_token %}

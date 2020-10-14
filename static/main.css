@@ -86,7 +86,8 @@ div.formBox{display:inline-block;vertical-align:top;height:100%;}
 div#logInBox{position:fixed;top:89px;right:100px;background-color:#abc941;border:0px solid #000;z-index:195;width:630px;height:93px;transition:400ms ease-in-out;-webkit-transition:400ms ease-in-out;-moz-transition:400ms ease-in-out;-webkit-backface-visibility:hidden;}
 	div#logInBox.hidden{top:-6px;}
 form#logInForm{padding:30px 20px;font-size:0px;}
-	form#logInForm input[type="text"], form#logInForm input[type="password"]{font:18px 'Source Sans Pro', Arial;font-weight:400;height:34px;line-height:34px;padding:0px 10px;vertical-align:middle;width:240px;border:0px;background-color:#fff !important;margin-right:5px;margin-bottom:5px;}
+	form#logInForm input[type="text"]{font:18px 'Source Sans Pro', Arial;font-weight:400;height:34px;line-height:34px;padding:0px 10px;vertical-align:middle;width:240px;border:0px;background-color:#fff !important;margin-right:5px;margin-bottom:5px;}
+	form#logInForm input[type="password"]{font:18px 'Source Sans Pro', Arial;font-weight:400;height:34px;line-height:34px;padding:0px 10px;vertical-align:middle;width:240px;border:0px;background-color:#fff !important;margin-right:15px;margin-bottom:5px; margin-left: 30px; margin-top: 15px;}
 	input#loginBtn{width:41px;height:30px;margin:0px 0px 0px 4px;display:inline-block;vertical-align:middle;}
 	form#logInForm div.formBox{text-align:right;}
 	a#forgot{font:15px 'Source Sans Pro', Arial;font-weight:300;color:#000;margin-right:10px;}
@@ -381,7 +382,11 @@ div.contact.mid{margin:0px 40px 40px 40px;}
 div.terms > div.content{padding-bottom:40px;}
 div.terms > div.content h2 span{display:block;font:22px/29px 'Source Sans Pro', Arial;font-weight:600;}
 
-input[type="text"], input[type="password"]{font:18px 'Source Sans Pro', Arial;font-weight:400;height:34px;line-height:34px;padding:0px 10px;vertical-align:middle;width:240px;border:1px solid #9a9a9a;background-color:#fff !important;margin-right:5px;margin-bottom:10px;}
+form input[type="text"]{font:18px 'Source Sans Pro', Arial;font-weight:400;height:34px;line-height:34px;padding:0px 10px;vertical-align:middle;width:240px;border:0px;background-color:#fff !important;margin-right:5px;margin-bottom:5px; margin-left: 24px;}
+form input[type="password"]{font:18px 'Source Sans Pro', Arial;font-weight:400;height:34px;line-height:34px;padding:0px 10px;vertical-align:middle;width:240px;border:0px;background-color:#fff !important;margin-right:15px;margin-bottom:5px; margin-left: 30px; margin-top: 5px;}
+
+label {margin-top: 2rem;}
+
 input[type="submit"]{border:1px solid #90ae2c;background-color:#90ae2c;display:inline-block;color:#ffffff;font:18px/21px 'Source Sans Pro', Arial;font-weight:300;padding:10px 20px 10px 20px;cursor:pointer;margin-top:0px;}
 input[type="checkbox"]{cursor:pointer;}
 select{font:18px 'Source Sans Pro', Arial;font-weight:400;color:#979797;height:43px;line-height:43px;padding-left:10px;padding-right:10px;vertical-align:middle;width:262px; -webkit-appearance:none;-moz-appearance:none;text-indent:0.01px;text-overflow:'';cursor:pointer;border:1px solid #979797;border-radius:0px;background-image:url(images/arrow_d.svg);background-size:36px 15px;background-repeat:no-repeat;background-position:right 17px;}
